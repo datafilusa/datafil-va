@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+.hero {
+  background-image: url('image/desk.png'); /* 🔁 Change to your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh; /* Reduced from 100vh to remove excessive gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 50, 0.5); /* overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+  padding-top: 20px; /* Optional: adds spacing from top */
+}
+
+.hero h1 {
+  font-size: 3.5rem;      /* Larger for desktop */
+  line-height: 1.4;       /* More spacing between lines */
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 2.4rem;      /* Slightly larger for desktop */
+  line-height: 1.8;       /* Better line spacing */
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: white;
+  color: #2d2d62;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #2d2d62;
+  color: white;
+}
+
+/* ✅ Mobile styles remain unchanged */
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+
+  .hero {
+    height: 70vh; /* Reduced height for smaller screens */
+    background-position: center center;
+  }
+}

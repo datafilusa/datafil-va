@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  overflow-x: hidden; /* This line prevents horizontal scrolling */
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.image-side,
+.text-side {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-side {
+  background-color: #2d2d62;
+  color: #ddbd78;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-side h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.learn-more-btn {
+  background-color: white;
+  color: #2d2d62;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #ddbd78;
+  color: #2d2d62;
+}
+
+.text-side {
+  background-color: #2d2d62;
+  color: #ddbd78;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;        /* Horizontally center the content */
+  text-align: center;         /* Center the text lines */
+}
+
+@media (min-width: 1800px) {
+  .text-side p {
+    font-size: 25px;       /* increase font size */
+    margin-bottom: 25px;   /* more spacing between paragraphs */
+    line-height: 1.8;      /* optional: improves readability */
+  }
+
+  .text-side h2 {
+    font-size: 50px;       /* slightly bigger heading */
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .text-side p {
+    font-size: 20px;       /* slightly smaller than desktop large screens */
+    margin-bottom: 23px;   /* more space between paragraphs */
+    line-height: 1.8;      /* better readability */
+  }
+
+  .text-side h2 {
+    font-size: 40px;       /* optional: adjust heading size in same range */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .text-side p {
+    font-size: 14px;       /* slightly smaller than desktop large screens */
+    margin-bottom: 23px;   /* more space between paragraphs */
+    line-height: 1.8;      /* better readability */
+  }
+
+  .text-side h2 {
+    font-size: 30px;       /* optional: adjust heading size in same range */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .info-section {
+    flex-direction: column;
+  }
+
+  .image-side,
+  .text-side {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-side {
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .text-side h2 {
+    font-size: 15px;
+  }
+
+  .text-side p {
+    font-size: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin: 0 auto 10px auto;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .learn-more-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .text-side p {
+    font-size: 12px;}
+}
