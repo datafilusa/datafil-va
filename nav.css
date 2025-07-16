@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.logo {
+  margin-left: 15%;
+}
+
+.logo a img {
+  cursor: pointer;
+}
+
+.logo img {
+  height: 60px; /* slightly increased */
+  max-width: 100%;
+  margin-left: 40%;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+  margin-right: 20%;
+}
+
+.nav-buttons a button {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #2d2d62;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px; /* increased from 9px */
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Remove hover underline */
+.nav-buttons a button:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* ✅ UNDERLINE active page */
+.nav-buttons a.active button {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+/* Burger menu default (desktop hidden) */
+.burger {
+  display: none;
+  font-size: 35px; /* increased */
+  cursor: pointer;
+  user-select: none;
+  color: #2d2d62;
+}
+
+
+@media (max-width: 1200px) {
+  .nav-buttons {
+    margin-right: calc(30% - 50px);
+  }
+
+  
+}
+/* Tablet view adjustments */
+@media (max-width: 1000px) {
+  .nav-buttons {
+    margin-right: 10%;
+  }
+}
+
+/* ✅ Responsive for mobile view */
+@media (max-width: 1500px) {
+  .nav-buttons {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(45, 45, 98, 0.6); /* semi-transparent dark tint */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 0%;
+  }
+
+  .nav-buttons a button {
+    color: white;
+    font-size: 13px; /* slightly larger for mobile */
+  }
+
+  .nav-buttons a.active button {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    color: white;
+  }
+
+  .nav-buttons.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    margin-left: -50px;
+  }
+}
