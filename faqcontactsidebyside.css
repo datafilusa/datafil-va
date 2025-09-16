@@ -397,6 +397,15 @@ html, body {
   .service-card.faq-card .service-text h2 .faq-yellow {
     font-size: 0.8em;
   }
+
+  
+  .form-submit button {
+    max-width: 200px;   /* make it narrower */
+    width: auto;        /* don’t stretch full width */
+    display: block;     /* allows margin auto to work */
+    margin: 0 auto;     /* center horizontally */
+    font-size: 14px;
+  }
 }
 
 /* ========================== */
@@ -432,6 +441,21 @@ html, body {
   .service-card.faq-card .service-text h2 .faq-yellow {
     font-size: 0.75em;
   }
+
+
+  /* ========================== */
+/* Extra small mobile */
+@media (max-width: 500px) {
+  /* ...existing styles... */
+
+  .form-submit button {
+    max-width: 200px;   /* same narrower style */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}
 }
 
 /* ========================== */
