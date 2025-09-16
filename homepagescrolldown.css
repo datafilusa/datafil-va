@@ -1,0 +1,68 @@
+.scroll-down-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 211, 89, 0.75);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: none; /* initially hidden */
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 229, 102, 0.95);
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.scroll-down-btn .double-v {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.scroll-down-btn .double-v::before,
+.scroll-down-btn .double-v::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #2d2d62;
+  animation: bounce 1.5s infinite;
+}
+
+.scroll-down-btn .double-v::after {
+  top: 6px;
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(5px); }
+  60% { transform: translateY(3px); }
+}
+
+/* Hide scroll-down button on small screens (<1100px) */
+@media (max-width: 1100px) {
+  .scroll-down-btn {
+    display: none !important;
+  }
+}
+
+
+/* ============================= */
+/* Hide scroll-down button on small screens (<1100px) */
+@media (max-width: 1100px) {
+  .scroll-down-btn {
+    display: none !important;
+  }
+}

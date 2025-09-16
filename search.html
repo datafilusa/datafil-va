@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results - DataFil</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="search-results.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="nav.js" defer></script> <!-- handles burger menu, search overlay, search results -->
+</head>
+
+<body>
+  <div class="page-container">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/datafillogo.png" alt="DataFil Logo" />
+        </a>
+      </div>
+
+      <!-- Nav buttons -->
+      <nav class="nav-buttons" id="navButtons">
+        <a href="index.html"><button>HOME</button></a>
+        <a href="aboutus.html"><button>ABOUT US</button></a>
+        <a href="howitworks.html"><button>HOW IT WORKS</button></a>
+        <a href="faq.html"><button>FAQ</button></a>
+        <a href="contactus.html"><button>CONTACT US</button></a>
+      </nav>
+
+      <!-- Right side: search button + burger menu -->
+      <div class="navbar-right">
+        <button id="searchIcon" class="search-icon">
+          <img src="image/searchicon.png" alt="Search" />
+        </button>
+        <div class="burger" id="burgerMenu">☰</div>
+      </div>
+    </header>
+
+    <!-- Full-screen search overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" id="overlaySearchInput" placeholder="Type keywords to search..." />
+        <button id="overlaySearchButton">
+          <img src="image/searchicon3.png" alt="Search" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="search-results-wrapper">
+      <h1>Search Results</h1>
+      <div id="searchResultsContainer">
+        <!-- Dynamic search items will populate here -->
+      </div>
+    </main>
+
+    <!-- Footer (use your existing footer) -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <p>© 2025 DataFil. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom">
+          <a href="tel:+18885229949" class="footer-phone">
+            <img src="image/phoneicon.png" alt="Phone Icon" />
+            <span class="phone-number">+1 888 522 9949</span>
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61576732066938" target="_blank" class="social-icon" aria-label="Facebook">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#2d2d62"/>
+              <path fill="#ffffff" d="M15.12 8.59h-1.38c-.19 0-.42.25-.42.59v1.21h1.8l-.26 2.06
+                 h-1.54v5.29h-2.13v-5.29H9.89v-2.06h1.4v-1.43c0-1.14.77-2.05
+                 2.03-2.05h1.8v2.68z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/datafil-virtual-assistance-0a7a06371/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#2d2d62"/>
+              <path fill="#ffffff" d="M8.54 17.25H6.45V10.5h2.09v6.75zM7.5 9.54c-.67 0-1.2-.54-1.2-1.21
+                 0-.67.53-1.21 1.2-1.21.66 0 1.2.54 1.2 1.21 0 .67-.54 1.21-1.2
+                 1.21zm10.05 7.71h-2.08v-3.27c0-.78-.01-1.79-1.09-1.79s-1.26.86-1.26
+                 1.73v3.33h-2.08V10.5h2v.91h.03c.28-.52.97-1.09 2-1.09 2.14
+                 0 2.53 1.41 2.53 3.25v3.68z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

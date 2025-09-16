@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Home",
+    "url": "index.html",
+    "snippet": "DataFil provides professional virtual assistants for businesses, handling admin, communication, social media, calendar management, customer service, and task management. Personalized support for startups, small businesses, and scaling companies. Trusted by clients nationwide with testimonials from real estate, education, and healthcare sectors.",
+    "image": "image/homepagethumb.png",
+    "keywords": [
+      "virtual assistant",
+      "admin support",
+      "task management",
+      "communication support",
+      "social media management",
+      "calendar management",
+      "customer service",
+      "business support",
+      "startups",
+      "small businesses",
+      "scaling companies",
+      "testimonials",
+      "professional assistance"
+    ]
+  },
+  {
+    "title": "About Us",
+    "url": "aboutus.html",
+    "snippet": "DataFil LLC provides professional virtual assistance solutions, connecting businesses with trained VAs, offering personalized support and scalable solutions. Experienced in multiple industries, focused on client satisfaction and business growth.",
+    "image": "image/aboutusthumb.png",
+    "keywords": [
+      "about DataFil",
+      "virtual assistance company",
+      "trained virtual assistants",
+      "business support",
+      "professional guidance",
+      "personalized support",
+      "scalable solutions",
+      "client satisfaction",
+      "industry expertise"
+    ]
+  },
+  {
+    "title": "How It Works",
+    "url": "howitworks.html",
+    "snippet": "Learn how DataFil connects businesses with dedicated virtual assistants. Step-by-step process for onboarding, matching VAs with business needs, and ensuring seamless communication and productivity.",
+    "image": "image/howitworksthumb.png",
+    "keywords": [
+      "how it works",
+      "virtual assistant onboarding",
+      "business matching",
+      "productivity",
+      "communication support",
+      "step by step process",
+      "dedicated VA"
+    ]
+  },
+  {
+    "title": "FAQ",
+    "url": "faq.html",
+    "snippet": "Find answers to frequently asked questions about DataFil virtual assistants, services, pricing, onboarding, communication, task management, and client support.",
+    "image": "image/faqthumb.png",
+    "keywords": [
+      "FAQ",
+      "virtual assistant questions",
+      "services",
+      "pricing",
+      "onboarding",
+      "task management",
+      "client support"
+    ]
+  },
+  {
+    "title": "Contact Us",
+    "url": "contactus.html",
+    "snippet": "Reach out to DataFil via phone, email, or online form. Our team is ready to provide assistance and answer queries about virtual assistant services, onboarding, and support for your business.",
+    "image": "image/contactusthumb.png",
+    "keywords": [
+      "contact DataFil",
+      "phone",
+      "email",
+      "online form",
+      "virtual assistant support",
+      "queries",
+      "business assistance"
+    ]
+  }
+]

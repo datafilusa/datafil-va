@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.image-side,
+.text-side {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center; /* ✅ Protect left side (WHY CHOOSE US text stays visible) */
+  display: block;
+}
+
+.text-side {
+  background-color: #2d2d62;
+  color: #ddbd78;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* center horizontally */
+  text-align: center;    /* center text */
+}
+
+.text-side h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.learn-more-btn {
+  background-color: white;
+  color: #2d2d62;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #ddbd78;
+  color: #2d2d62;
+}
+
+/* === Extra Large Screens (1800px+) === */
+@media (min-width: 1800px) {
+  .text-side p {
+    font-size: 25px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+  }
+
+  .text-side h2 {
+    font-size: 50px;
+  }
+}
+
+/* === Large Screens (1200px–1799px) === */
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .text-side p {
+    font-size: 20px;
+    margin-bottom: 23px;
+    line-height: 1.8;
+  }
+
+  .text-side h2 {
+    font-size: 40px;
+  }
+}
+
+/* === Medium Screens (992px–1199px) === */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .text-side p {
+    font-size: 14px;
+    margin-bottom: 23px;
+    line-height: 1.8;
+  }
+
+  .text-side h2 {
+    font-size: 30px;
+  }
+}
+
+/* === Tablet & Below (<=1200px) === */
+@media (max-width: 1500px) {
+  .split-section {
+    flex-direction: column;
+  }
+
+  .image-side,
+  .text-side {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-side {
+    padding: 30px;
+    text-align: center;
+  }
+
+  /* ✅ Reset image focus to center for stacked layout */
+  .image-side img {
+    object-position: center center;
+  }
+}
+
+/* === Mobile (<=600px) === */
+@media (max-width: 600px) {
+  .text-side {
+    padding: 20px;
+  }
+
+  .text-side h2 {
+    font-size: 18px;
+  }
+
+  .text-side p {
+    font-size: 14px;
+    margin: 0 auto 10px auto;
+    padding: 0 10px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  .learn-more-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
