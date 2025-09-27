@@ -104,7 +104,7 @@ body {
   }
 
   .hero-video {
-    margin-top: var(--navbar-height);
+    margin-top: 0;
   }
 
   .hero-overlay {
@@ -121,4 +121,9 @@ body {
   .hero-overlay {
     top: 70%;   /* move overlay higher on mobile screens */
   }
+
+    .hero-video {
+    margin-top: 0; /* remove extra space above the video */
+  }
+
 }

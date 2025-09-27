@@ -2,26 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollBtn = document.getElementById('scrollDownBtn');
   const overlay = document.querySelector('.hero-overlay');
   const nextSection = document.querySelector('.services');
-  const spacing =20; // Reduced px between overlay and scroll button to move it up
+  const spacing = 20; // Reduced px between overlay and scroll button to move it up
   const extraOffset = 10; // Additional upward shift
 
   if (!scrollBtn || !overlay || !nextSection) return;
 
   const arrowSpan = scrollBtn.querySelector('.double-v');
 
+  // Position the scroll button
   function positionScrollButton() {
     if (window.innerWidth < 1100) return;
 
-    // Vertical position below overlay with extra offset
     const top = overlay.offsetTop + overlay.offsetHeight + spacing - extraOffset;
     scrollBtn.style.top = top + 'px';
-
-    // Horizontal position handled by CSS
     scrollBtn.style.position = 'absolute';
     scrollBtn.style.zIndex = '10';
     scrollBtn.style.display = 'flex';
   }
 
+  // Resize the arrow
   function resizeArrow() {
     let btnSize = 60;
     let arrowBorder = 12;
@@ -35,9 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollBtn.style.width = scrollBtn.style.height = btnSize + 'px';
     arrowSpan.style.width = arrowSpan.style.height = (arrowBorder * 2) + 'px';
 
-    if (document.getElementById('dynamicArrowStyle')) {
-      document.getElementById('dynamicArrowStyle').remove();
-    }
+    const existingStyle = document.getElementById('dynamicArrowStyle');
+    if (existingStyle) existingStyle.remove();
 
     const style = document.createElement('style');
     style.id = 'dynamicArrowStyle';
@@ -55,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
   }
 
+  // Show/hide button based on width
   function updateVisibility() {
     if (window.innerWidth < 1100) {
       scrollBtn.style.display = 'none';
@@ -63,18 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Scroll to next section
   scrollBtn.addEventListener('click', () => {
     nextSection.scrollIntoView({ behavior: 'smooth' });
   });
 
+  // Initialize
   function init() {
     resizeArrow();
     updateVisibility();
     positionScrollButton();
   }
 
-  window.requestAnimationFrame(() => setTimeout(init, 50));
+  // Run after everything (images, videos) loads
+  window.addEventListener('load', init);
 
+  // Adjust on resize
   window.addEventListener('resize', init);
+
+  // Adjust on scroll
   window.addEventListener('scroll', positionScrollButton);
+
+  // Observe overlay for dynamic size changes
+  const observer = new ResizeObserver(positionScrollButton);
+  observer.observe(overlay);
 });
