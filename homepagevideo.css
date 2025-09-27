@@ -1,0 +1,38 @@
+.homepage-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 20px; /* ✅ TOP PADDING HERE */
+}
+
+.video-wrapper video {
+  width: 90vw;
+  max-height: 60vh;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 20px !important;
+  object-fit: contain;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+/* Optional: constrain only very large screens slightly */
+@media (min-width: 1600px) {
+  .video-wrapper video {
+    max-width: 1200px;
+  }
+}

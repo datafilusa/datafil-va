@@ -1,0 +1,74 @@
+/* ================== Client Stories Banner ================== */
+.client-stories-bar {
+  position: relative;        
+  width: 100%;
+  height: 90px;
+  background-color: #f8cf40;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertical centering */
+  margin: 0;
+  padding-top: 20px;
+
+  /* Push below fixed navbar */
+  margin-top: 80px; /* equal to navbar height */
+  box-sizing: border-box; /* ensures no extra spacing from padding/margin */
+}
+
+
+
+.client-stories-link {
+  position: relative;
+  display: inline-block;     
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d62;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* FAQ page font override */
+.client-stories-bar,
+.client-stories-link {
+  font-family: 'Poppins', sans-serif !important; /* match other pages */
+  font-weight: 600 !important;                    /* match the other pages */
+}
+
+
+.client-stories-link .underline {
+  position: absolute;
+  bottom: -6px;              
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2d2d62;
+  display: block;            
+  transition: width 0.4s ease;
+}
+
+/* Second underline slightly below the first */
+.client-stories-link .underline:nth-of-type(2) {
+  bottom: -10px;
+  transition-delay: 0.1s;
+}
+
+.client-stories-link:hover .underline {
+  width: 100%;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .client-stories-link {
+    font-size: 0.95rem; /* slightly smaller */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .client-stories-link {
+    font-size: 0.85rem; /* even smaller */
+  }
+}

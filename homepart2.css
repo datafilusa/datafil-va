@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.service-card {
+  max-width: 300px;
+  flex: 1 1 300px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.service-card h3 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d2d62;
+  line-height: 1.4;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Video card styling */
+.video-card {
+  flex: 0 0 auto;       /* width can expand naturally */
+  height: 390px;        /* match full height of service card including image + h3 + p */
+}
+
+.video-card video {
+  width: auto;           /* let video width adjust to preserve aspect ratio */
+  max-width: 100%;       /* prevent overflow */
+  height: 100%;          /* match height of service card */
+  object-fit: contain;   /* show full video without cropping */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 10px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .video-card {
+    width: 100%;
+    height: auto;        /* adjust height on mobile */
+  }
+
+  .video-card video {
+    height: 250px;
+    width: 100%;
+  }
+}

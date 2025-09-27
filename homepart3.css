@@ -1,0 +1,149 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Testimonial Section */
+.testimonials {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  display: flex;             /* make icon + text inline */
+  align-items: center;       /* vertically center icon with text */
+  justify-content: center;   /* center in the section */
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #2d2d62;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  gap: 10px;                 /* space between icon and text */
+}
+
+.testimonials-icon {
+  width: 32px;               /* adjust size as needed */
+  height: 32px;
+}
+
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform; /* ✅ prevents blur/flicker */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* ✅ smooth zoom-in */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Quotes in Merriweather Italic */
+.testimonial-card .quote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* Name */
+.testimonial-card h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d62;
+  margin-top: 10px;
+}
+
+/* Title, Location, Links */
+.testimonial-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #444;
+  margin: 4px 0;
+}
+
+.testimonial-card .location {
+  font-size: 13px;
+  color: #666;
+}
+
+.testimonial-card a {
+  font-size: 14px;
+  color: #2d2d62;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.testimonial-card a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet: 1 per row, but narrower with side space */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    max-width: 700px; /* ✅ makes cards narrower */
+  }
+
+  .testimonials h2 {
+    font-size: 28px;
+  }
+
+  .testimonial-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-card .quote {
+    font-size: 13px;
+  }
+}
+
+/* Mobile: full width 1 per row */
+@media (max-width: 600px) {
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    max-width: 100%; /* ✅ takes full width */
+  }
+
+  .testimonials h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-card .quote {
+    font-size: 13px;
+  }
+}

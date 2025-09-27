@@ -1,0 +1,145 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #2d2d62;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main takes available vertical space */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 320px;
+}
+
+/* Default layout for desktop */
+.contact-item img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.contact-item span {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #2d2d62;
+  letter-spacing: 0.2px;
+  white-space: normal;
+}
+
+/* Remove link styling (no underline or color change) */
+.mobile-call-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none; /* prevent click by default */
+}
+
+/* Tablet Padding Tweak */
+@media (min-width: 900px) and (max-width: 2000px) {
+  .contact-info-section {
+    padding: 50px 20px;
+  }
+}
+
+/* ✅ Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .contact-info-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contact-item img {
+    margin: 0 0 10px 0;
+  }
+
+  /* ✅ Stack phone icon + number consistently */
+  .contact-item .mobile-call-link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    pointer-events: auto; /* enable tap-to-call */
+  }
+
+  .contact-item .mobile-call-link img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 10px 0;
+  }
+
+  .contact-item .mobile-call-link span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d2d62;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Footer (optional) */
+.footer {
+  background-color: #2d2d62;
+  padding: 15px 20px;
+  color: white;
+}

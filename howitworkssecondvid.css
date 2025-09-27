@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+/* ================== Centered Responsive Video ================== */
+.howitworks-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+.video-wrapper video {
+  width: 70%;
+  max-height: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ================== Overlay CTA + Toll Free ================== */
+.howitworks-overlay {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-40%);
+  text-align: left;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* ================== Button ================== */
+.hero-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #2d2d62;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid #ffe28a;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-button:hover {
+  background-color: #f8cf40;
+  color: #2d2d62;
+  border: 2px solid white;
+}
+
+/* ================== Toll-free text with icon ================== */
+.tollfree {
+  display: flex;
+  flex-direction: column; /* always stack main + sub */
+  align-items: flex-start;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.tollfree,
+.tollfree:link,
+.tollfree:visited,
+.tollfree:hover,
+.tollfree:active,
+.tollfree:focus {
+  text-decoration: none !important;
+  color: white !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column; /* force stacked layout for desktop too */
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.call-main-line {
+  display: flex; /* icon + main number inline */
+  align-items: center;
+  gap: 8px;
+}
+
+.call-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.call-main {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.call-sub {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center; /* center under main line */
+  display: block;
+  width: 100%; /* make span take full width of parent for centering */
+  margin-top: 2px;
+  color: #F5F5DC;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hide clickable version on desktop */
+.call-mobile { display: none; }
+.call-desktop { display: flex; }
+
+/* ================== Responsive adjustments ================== */
+@media (max-width: 1024px) { /* tablet and smaller */
+  .call-desktop { display: none; }
+  .call-mobile { display: flex; }
+
+  .call-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  .call-mobile .call-main-line {
+    align-items: center;
+  }
+
+  .call-mobile .call-icon,
+  .call-mobile .call-main,
+  .call-mobile .call-sub {
+    pointer-events: none; /* ensure full parent <a> clickable */
+  }
+
+  .call-mobile .call-sub {
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 600px) { /* small phones */
+  .video-wrapper {
+    max-width: 800px;
+  }
+
+  .video-wrapper video {
+    width: 85%;
+    max-height: 380px;
+  }
+
+  .howitworks-overlay {
+    top: 55%;
+    left: 14%;
+    transform: translateY(-40%);
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-button {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+
+  .tollfree {
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .call-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .call-main {
+    font-size: 0.95rem;
+  }
+
+  .call-sub {
+    font-size: 0.8rem;
+  }
+}

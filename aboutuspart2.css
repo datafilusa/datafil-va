@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+.team-section {
+  max-width: 1125px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+  text-align: left;
+  position: relative;
+  left: -15px; /* adjust this value until it matches the carousel */
+}
+
+
+.team-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  color: #2d2d62;
+  font-size: 32px;
+}
+
+
+
+
+
+.team-section h2 .team-icon {
+  width: 40px;   /* adjust size */
+  height: auto;
+}
+
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  gap: 40px;
+  justify-content: flex-start; /* aligns cards to same left edge */
+}
+
+
+
+.team-member {
+  text-decoration: none;
+  width: 250px;   /* fixed width */
+  cursor: pointer;
+}
+
+/* Default card styles */
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 5px; /* smoother edges */
+  overflow: hidden;
+  height: 270px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), /* soft drop shadow */
+              0 0 12px rgba(0, 0, 0, 0.1);    /* outer glow on edges */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* fallback */
+}
+
+
+/* Custom backgrounds for each card */
+/* Custom backgrounds with vignette effect */
+.team-member:nth-child(1) .card {
+  background: radial-gradient(circle at center,
+    #ffd502 0%,
+    #ffda02 9%,
+    #fcdc02 18%,
+    #f9d202 27%,
+    #f7cc02 36%,
+    #f3c602 45%,
+    #f0cb02 54%,
+    #ebc502 63%,
+    #e1bc01 72%,
+    #d6b401 81%,
+    #cda801 90%,
+    #b89a00 100%
+  );
+}
+
+
+.team-member:nth-child(2) .card {
+  background: radial-gradient(circle at center,
+    #4a4a91 0%,   /* bright center */
+    #454585 10%,
+    #3f3f7a 20%,
+    #39396e 30%,
+    #343362 40%,
+    #2e2e57 50%,
+    #29294d 60%,
+    #242443 70%,
+    #1f1f39 80%,
+    #1a1a30 90%,
+    #151526 100%   /* darkest edges */
+  );
+}
+
+.team-member:nth-child(3) .card {
+  background: radial-gradient(circle at center,
+    #ffd502 0%,
+    #ffda02 9%,
+    #fcdc02 18%,
+    #f9d202 27%,
+    #f7cc02 36%,
+    #f3c602 45%,
+    #f0cb02 54%,
+    #ebc502 63%,
+    #e1bc01 72%,
+    #d6b401 81%,
+    #cda801 90%,
+    #b89a00 100%
+  );
+
+}
+
+
+
+
+.team-member:nth-child(4) .card {
+  background: radial-gradient(circle at center,
+    #4a4a91 0%,   /* bright center */
+    #454585 10%,
+    #3f3f7a 20%,
+    #39396e 30%,
+    #343362 40%,
+    #2e2e57 50%,
+    #29294d 60%,
+    #242443 70%,
+    #1f1f39 80%,
+    #1a1a30 90%,
+    #151526 100%   /* darkest edges */
+  );
+}
+
+
+
+
+
+.card:hover {
+  transform: scale(1.2); /* zoom in a bit more */
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.2); /* stronger shadow */
+  z-index: 5; /* ensure hovered card stays above neighbors */
+}
+
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;          /* stick text to bottom */
+  left: 0;
+  width: 100%;        /* stretch across card */
+  z-index: 2;         /* above image */
+  background: transparent;
+  padding: 10px 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;          
+  left: 0;
+  width: 100%;        
+  z-index: 2;         
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02) 1%,     /* faint at top */
+    rgba(0, 0, 0, 0.5) 100%     /* darker at bottom */
+  );
+  padding: 20px 15px 15px; /* increased top padding, extra bottom padding */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.card-info h3 {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 6px;  /* added spacing */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+
+
+/* Tablet: 2 cards per row, centered */
+@media (max-width: 1200px) {
+  .team-section {
+    left: 0; /* reset the desktop offset */
+    text-align: center;
+  }
+
+  .team-section h2 {
+    justify-content: center; /* center the heading + icon */
+  }
+
+  .team-container {
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center; /* center the 2-column grid */
+  }
+}
+
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: repeat(1, 250px);
+  }
+}

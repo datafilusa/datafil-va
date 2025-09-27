@@ -1,0 +1,13 @@
+.team-member:nth-child(3) .card {
+  background: radial-gradient(circle at center, 
+              #c74a6a 0%,     /* bright center */
+              #a53e59 70%,    /* mid darker */
+              #732b3d 100%);  /* darkest edges */
+}
+
+.team-member:nth-child(4) .card {
+  background: radial-gradient(circle at center, 
+              #a657fd 0%, 
+              #8a40d4 70%, 
+              #5a298a 100%);
+}

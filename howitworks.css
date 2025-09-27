@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+/* ================== Hero Section (Video) ================== */
+.hero-video,
+.how-it-works-hero {
+  position: relative;
+  width: 100vw;      /* full viewport width */
+  height: 60vh;      /* adjust for desired crop */
+  overflow: hidden;
+  margin: 0;
+}
+
+.hero-video video,
+.how-it-works-hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;        /* maintain aspect ratio */
+  height: 100%;       /* fill vertical height */
+  min-width: 100%;    /* ensure horizontal coverage */
+  object-fit: cover;  /* crop top and bottom */
+  object-position: center; /* center the video */
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+/* Optional overlay button for homepage */
+.hero-overlay {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #2d2d62;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid #ffe28a;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-button:hover {
+  background-color: rgba(45, 45, 98, 0.8);
+  color: white;
+}
+
+/* ================== Responsive Hero Heights ================== */
+@media (max-width: 1800px) {
+  .hero-video,
+  .how-it-works-hero {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero-video,
+  .how-it-works-hero {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-video,
+  .how-it-works-hero {
+    height: 35vh;
+  }
+
+  .hero-video video,
+  .how-it-works-hero video {
+    object-position: center 60%; /* adjust cropping on mobile */
+  }
+
+  .hero-overlay {
+    bottom: 10%;
+  }
+
+  .hero-button {
+    font-size: 0.8rem;
+    padding: 8px 18px;
+  }
+}

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --navbar-height: 80px;
+  --client-bar-height: 90px; /* same as other pages */
+}
+
+/* ===================== Reset Body ===================== */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+/* ================== Client Stories Banner ================== */
+.client-stories-bar {
+  width: 100%;
+  height: var(--client-bar-height);
+  margin-top: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8cf40;
+  padding: 0; /* remove extra padding if any */
+  box-sizing: border-box;
+}
+
+
+.client-stories-link {
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d62;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* prevent extra gap if bar is placed INSIDE main */
+.client-stories-bar + main {
+  margin-top: 0 !important;
+}
+
+/* ===================== Contact Section ===================== */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-top: 0;
+  z-index: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* ===================== Contact Image ===================== */
+.contact-image {
+  flex: 1;
+  min-width: 350px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  padding-top: 0;
+}
+
+/* ===================== Contact Form ===================== */
+.contact-form-container {
+  flex: 1;
+  background-color: #2d2d62;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact-form-container p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.send-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.send-btn {
+  width: 100px;
+  padding: 10px 0;
+  background-color: white;
+  color: #2d2d62;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #ddbd78;
+  color: #2d2d62;
+}
+
+/* ===================== Responsive Adjustments ===================== */
+
+/* Tablet / Medium screens */
+@media (max-width: 1200px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
+
+  /* Center form inputs on narrower screens */
+  .form-row input,
+  .form-row textarea {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .contact-form-container h2,
+  .contact-form-container p {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .contact-form-container h2 {
+    padding-top: 30px;
+    font-size: 20px;
+  }
+
+  .contact-form-container p {
+    font-size: 13px;
+  }
+}
+
+/* Large screens adjustment for top padding */
+@media (min-width: 800px) and (max-width: 1800px) {
+  .contact-form-container h2 {
+    padding-top: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-image img {
+    padding-top: 0;
+    object-position: top;
+  }
+}

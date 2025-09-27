@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400&family=Open+Sans:wght@400;700&display=swap');
+
+/* ========== VA Stories Section ========== */
+.va-stories {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* VA Title Wrapper for Icon + Text */
+.va-title {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+  color: #2d2d62;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;          /* slightly taller to balance icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* vertically centers all children */
+  gap: 8px;                   /* spacing between span and "VAs' Stories" */
+}
+
+.va-title-icon-wrapper {
+  display: inline-flex;
+  align-items: center;        /* vertically center icon and "Our" */
+  gap: 5px;
+}
+
+.va-title-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+
+/* ========== VA Card Layout ========== */
+.va-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 18px;
+  border: 2px solid rgba(45, 45, 98, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 0 auto 40px auto;
+  max-width: 1300px; /* increased width for more space */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.va-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Left: Image + Name ========== */
+.va-left {
+  flex: 1.5;                  /* wider left side */
+  min-width: 350px;
+  text-align: center;
+  padding: 0;
+  background-color: #f8cf40;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  /* push children to bottom */
+  align-items: center;
+  position: relative;          /* for h3 layering */
+}
+
+.va-left img {
+  max-height: 85%;           /* take full height of container */
+  width: auto;                /* maintain aspect ratio */
+  display: block;
+  z-index: 1;
+  border-radius: 12px;
+  margin-bottom: 0;           /* flush to bottom */
+  object-fit: contain;        /* no cropping, always inside container */
+  align-self: flex-end;       /* stick to bottom */
+  max-width: 100%;            /* never exceed container width */
+   align-self: center;
+}
+
+.va-left h3 {
+  position: absolute;
+  bottom: 10px;               /* slightly above bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ========== Right: Story Text ========== */
+.va-right {
+  flex: 2;                     /* wider right side */
+  padding: 40px 35px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.va-right p {
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 16px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1200px) {
+  .va-card {
+    flex-direction: column;  /* stacked layout */
+    max-width: 85%;
+  }
+
+  .va-left,
+  .va-right {
+    padding: 28px 20px;
+  }
+
+  /* Slightly reduced height, width unchanged */
+  .va-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* push content to bottom */
+    align-items: center;       /* horizontally center image */
+    position: relative;        /* required for h3 absolute */
+    min-height: 450px;         /* slight reduction from original */
+    width: 100%;               /* keep original width */
+    padding-bottom: 0;
+  }
+
+  /* Slightly smaller image: ~10% reduction */
+  .va-left img {
+    height: 500px;             /* slightly smaller than desktop */
+    max-width: 100%;            /* slight horizontal shrink */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0;          /* flush to bottom */
+    display: block;
+    align-self: center;
+  }
+
+  /* Keep h3 layered on top of image */
+  .va-left h3 {
+    position: absolute;
+    bottom: 10px;              /* slightly above bottom of image */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;                /* above image */
+    margin: 0;
+    font-size: 40px;           /* slightly smaller than desktop */
+    color: white;
+    white-space: nowrap;
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  .va-title {
+    font-size: 23px;
+  }
+
+  .va-title-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .va-right {
+    padding: 20px 15px;
+  }
+
+  .va-right p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+
+
+
+
+
+
+
+    /* Slightly reduced height, width unchanged */
+  .va-left {
+
+    min-height: 300px;         /* slight reduction from original */
+    width: 100%;               /* keep original width */
+  }
+
+  /* Slightly smaller image: ~10% reduction */
+  .va-left img {
+    height: 300px;             /* slightly smaller than desktop */
+    max-width: 100%;            /* slight horizontal shrink */
+    width: auto;
+  }
+
+  /* Keep h3 layered on top of image */
+  .va-left h3 {
+    font-size: 30px;           /* slightly smaller than desktop */
+  }
+}
+@media (max-width: 500px) {
+  /* VA Card: stack fully and use full width */
+  .va-card {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 40px auto;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* VA Left: center image + background */
+  .va-left {
+    flex: unset !important;
+    min-width: unset !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important; /* horizontal center */
+    align-items: center !important;     /* vertical center */
+    padding: 0 !important;
+    background-color: #f8cf40;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  /* Image: fully centered and contained */
+  .va-left img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 80% !important;   /* leaves side margin */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Heading inside image area */
+  .va-left h3 {
+    position: absolute !important;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 28px !important;
+    white-space: nowrap;
+    color: white;
+  }
+
+  /* VA Right: center text container */
+  .va-right {
+    flex: unset !important;
+    min-width: unset !important;
+    width: 100% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Paragraph: prevent overflow */
+  .va-right p {
+    max-width: 100% !important;       /* paragraph never wider than container */
+    padding: 0 5px !important;        /* tiny padding inside */
+    margin: 0 0 16px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;               /* center align */
+    word-wrap: break-word;            /* force wrapping */
+    overflow-wrap: break-word;        /* more compatibility */
+    box-sizing: border-box;
+  }
+}

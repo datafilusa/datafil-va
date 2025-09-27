@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - DataFil</title>
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="contactuspart1.css" />
+  <link rel="stylesheet" href="contactuspart2.css" />
+  <link rel="stylesheet" href="contactus-fixed.css" />
+  <link rel="stylesheet" href="search.css" />
+  <link rel="stylesheet" href="testimoniallink.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+   
+
+  <script src="nav.js" defer></script>
+
+
+  <meta property="og:title" content="DataFil - Virtual Assistance Services" />
+  <meta property="og:description" content="Connecting continents and building dreams." />
+  <meta property="og:image" content="https://datafil-va.com/image/previewimage.png" />
+  <meta property="og:url" content="https://datafil-va.com" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DataFil - Virtual Assistance Services" />
+  <meta name="twitter:description" content="Connecting continents and building dreams." />
+  <meta name="twitter:image" content="https://datafil-va.com/image/previewimage.png" />
+</head>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="image/datafillogo.png" alt="DataFil Logo" />
+    </a>
+  </div>
+
+  <!-- Nav buttons -->
+  <nav class="nav-buttons" id="navButtons">
+    <a href="index.html" ><button>HOME</button></a>
+    <a href="aboutus.html" ><button>ABOUT US</button></a>
+    <a href="howitworks.html"><button>HOW IT WORKS</button></a>
+    <a href="faq.html"><button>FAQ</button></a>
+    <a href="contactus.html" class="active"><button>CONTACT US</button></a>
+  </nav>
+
+  <!-- Right side: search button + burger menu -->
+  <div class="navbar-right">
+    <button id="searchIcon" class="search-icon">
+      <img src="image/searchicon.png" alt="Search" />
+    </button>
+    <div class="burger" id="burgerMenu">☰</div>
+  </div>
+</header>
+
+<!-- Full-screen search overlay -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-box">
+    <input type="text" id="overlaySearchInput" placeholder="Type keywords to search..." />
+    <button id="overlaySearchButton">
+      <img src="image/searchicon3.png" alt="Search" />
+    </button>
+  </div>
+</div>
+
+<!-- Optional container for search results if you want inline results -->
+<div id="searchResultsContainer" style="display:none;"></div>
+
+
+<main>
+
+    <section class="client-stories-bar">
+    <a href="index.html#testimonials" class="client-stories-link">
+      Read our client stories to see how we deliver
+      <span class="underline"></span>
+      <span class="underline"></span>
+    </a>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-image">
+        <img src="image/virtualagentpic.png" alt="Contact Visual" />
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Tell us what you need, and we’ll find the right fit.</h2>
+        <p>In your message, please describe the type of support or services you’re looking for. This helps us tailor our recommendations and match you with a qualified virtual assistant who fits your specific business needs.</p>
+
+        <form action="https://formsubmit.co/datafilusa@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://datafil-va.com/thank-you.html">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting DataFil. We'll get back to you as soon as possible!">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="name" value="DataFil Inquiry" />
+
+          <div class="form-row">
+            <input type="text" name="firstname" placeholder="First Name *" required />
+            <input type="text" name="lastname" placeholder="Last Name *" required />
+          </div>
+
+          <div class="form-row">
+            <input type="text" name="industry" placeholder="Enter your industry or occupation" />
+          </div>
+
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Email *" required />
+            <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+          </div>
+
+          <div class="form-row">
+            <textarea name="message" placeholder="Message *" required></textarea>
+          </div>
+
+          <div class="send-btn-wrapper">
+            <button type="submit" class="send-btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info-section">
+    <div class="contact-info-container">
+      <div class="contact-item">
+        <a href="tel:+18885229949" class="mobile-call-link">
+          <img src="image/phoneicon.png" alt="Phone Icon" />
+          <span>+1 888 522 9949</span>
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <img src="image/emailicon.png" alt="Email Icon" />
+        <span>datafilusa@gmail.com</span>
+      </div>
+
+      <div class="contact-item">
+        <img src="image/locationicon.png" alt="Location Icon" />
+        <span>Makati City, Metro Manila,<br>Philippines, 1226</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <p>© 2025 DataFil. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="tel:+18885229949" class="footer-phone">
+        <img src="image/phoneicon.png" alt="Phone Icon" />
+        <span class="phone-number">+1 888 522 9949</span>
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=61576732066938" target="_blank" class="social-icon" aria-label="Facebook">
+        <svg width="30" height="30" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="#2d2d62"/>
+          <path fill="#ffffff" d="M15.12 8.59h-1.38c-.19 0-.42.25-.42.59v1.21h1.8l-.26 2.06
+             h-1.54v5.29h-2.13v-5.29H9.89v-2.06h1.4v-1.43c0-1.14.77-2.05
+             2.03-2.05h1.8v2.68z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/datafil-virtual-assistance-0a7a06371/" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <svg width="30" height="30" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="#2d2d62"/>
+          <path fill="#ffffff" d="M8.54 17.25H6.45V10.5h2.09v6.75zM7.5 9.54c-.67 0-1.2-.54-1.2-1.21
+             0-.67.53-1.21 1.2-1.21.66 0 1.2.54 1.2 1.21 0 .67-.54 1.21-1.2
+             1.21zm10.05 7.71h-2.08v-3.27c0-.78-.01-1.79-1.09-1.79s-1.26.86-1.26
+             1.73v3.33h-2.08V10.5h2v.91h.03c.28-.52.97-1.09 2-1.09 2.14
+             0 2.53 1.41 2.53 3.25v3.68z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const phoneLink = document.querySelector('.footer-phone');
+  if (window.innerWidth >= 768 && phoneLink) {
+    phoneLink.addEventListener('click', (e) => {
+      e.preventDefault();
+    });
+  }
+</script>
+
+</body>
+</html>

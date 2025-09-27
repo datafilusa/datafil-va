@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+.about-us-section {
+  background-color: #2d2d62;
+  padding: 150px 20px 80px; /* top, sides, bottom */
+  color: white;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 450px;
+  display: flex;
+  align-items: center;     /* ✅ vertical centering */
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-us-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;   /* ✅ keep paragraph readable */
+  margin: 0 auto;     /* ✅ center the block on all screen sizes */
+  text-align: left;   /* ✅ keep text left aligned */
+}
+
+.about-us-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.about-us-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+.about-us-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 950px) {
+  .about-us-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* container centers children */
+  }
+
+  .about-us-text {
+    max-width: 90%;    /* ✅ narrower on tablets */
+    text-align: left;  /* ✅ text stays left aligned */
+  }
+
+  .about-us-text h2 {
+    font-size: 28px;
+  }
+
+  .about-us-text p {
+    font-size: 15px;
+  }
+
+  .about-us-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us-text {
+    max-width: 95%;    /* ✅ tighter on small phones */
+  }
+
+  .about-us-text p {
+    font-size: 14px;
+  }
+}
