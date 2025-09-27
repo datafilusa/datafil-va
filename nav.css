@@ -35,12 +35,12 @@ body {
 /* Nav buttons */
 .nav-buttons {
   display: flex;
-  gap: 25px;
+  gap: 25px; /* restored original gap */
   position: relative;
 }
 
 .nav-buttons a {
-  position: relative; /* Needed for hover underline pseudo-elements */
+  position: relative; /* Needed for pseudo-elements */
 }
 
 .nav-buttons a button {
@@ -53,6 +53,12 @@ body {
   font-size: 15px;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-buttons a button span {
+  position: relative; /* for pseudo-elements */
 }
 
 .nav-buttons a button:hover {
@@ -63,9 +69,38 @@ body {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
-  color: #2d2d62; /* Keep original color */
+  color: #2d2d62;
 }
 
+/* ========================= */
+/* DOUBLE YELLOW UNDERLINE HOVER - DESKTOP ONLY */
+@media (min-width: 1301px) {
+  .nav-buttons a:not(.active) button span::before,
+  .nav-buttons a:not(.active) button span::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #f8cf40;
+    left: 0;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  .nav-buttons a:not(.active) button span::before {
+    bottom: -4px; /* top line slightly below text */
+  }
+
+  .nav-buttons a:not(.active) button span::after {
+    bottom: -8px; /* bottom line further below */
+  }
+
+  .nav-buttons a:not(.active) button span:hover::before,
+  .nav-buttons a:not(.active) button span:hover::after {
+    width: 100%; /* matches text width exactly */
+  }
+}
+
+/* ========================= */
 /* Right side: search + burger */
 .navbar-right {
   display: flex;
@@ -97,35 +132,6 @@ body {
   font-size: 35px;
   cursor: pointer;
   color: #2d2d62;
-}
-
-/* ========================= */
-/* DOUBLE YELLOW UNDERLINE HOVER - DESKTOP ONLY */
-@media (min-width: 1301px) {
-  .nav-buttons a:not(.active) button::before,
-  .nav-buttons a:not(.active) button::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f8cf40;
-    transition: width 0.3s ease;
-    pointer-events: none;
-  }
-
-  .nav-buttons a:not(.active) button::before {
-    bottom: 4px; /* top line */
-  }
-
-  .nav-buttons a:not(.active) button::after {
-    bottom: 0; /* bottom line */
-  }
-
-  .nav-buttons a:not(.active) button:hover::before,
-  .nav-buttons a:not(.active) button:hover::after {
-    width: 100%;
-  }
 }
 
 /* ========================= */
