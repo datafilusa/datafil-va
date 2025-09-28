@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -27,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         item.classList.add("active");
         if (chat) chat.style.display = "flex";
+
+        // Instantly scroll the expanded item into center of viewport.
+        // Use requestAnimationFrame to ensure the chat display change/layout is applied first.
+        if (typeof item.scrollIntoView === "function") {
+          requestAnimationFrame(() => {
+            item.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'nearest' });
+          });
+        }
       }
     });
   });
@@ -43,4 +50,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
