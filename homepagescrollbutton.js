@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const scrollBtn = document.getElementById('scrollDownBtn');
   const overlay = document.querySelector('.hero-overlay');
+  const video = document.querySelector('.hero-video video');
   const nextSection = document.querySelector('.services');
-  const spacing = 20; // Reduced px between overlay and scroll button to move it up
-  const extraOffset = 10; // Additional upward shift
+  const spacing = 20;
+  const extraOffset = 10;
 
   if (!scrollBtn || !overlay || !nextSection) return;
 
@@ -53,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
   }
 
-  // Show/hide button based on width
   function updateVisibility() {
     if (window.innerWidth < 1100) {
       scrollBtn.style.display = 'none';
@@ -62,28 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Scroll to next section
   scrollBtn.addEventListener('click', () => {
     nextSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Initialize
   function init() {
     resizeArrow();
     updateVisibility();
     positionScrollButton();
   }
 
-  // Run after everything (images, videos) loads
+  // Ensure position after everything loads
   window.addEventListener('load', init);
-
-  // Adjust on resize
   window.addEventListener('resize', init);
-
-  // Adjust on scroll
   window.addEventListener('scroll', positionScrollButton);
 
   // Observe overlay for dynamic size changes
   const observer = new ResizeObserver(positionScrollButton);
   observer.observe(overlay);
+
+  // ✅ NEW: Ensure video load triggers reposition
+  if (video) {
+    video.addEventListener('loadeddata', positionScrollButton);
+    video.addEventListener('loadedmetadata', positionScrollButton);
+  }
 });
