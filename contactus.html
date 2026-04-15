@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+        /* Ensure active burger menu link is always rectangular, even on hover */
+        .mobile-nav-list a.active,
+        .mobile-nav-list a.active:hover {
+          border-radius: 0 !important;
+        }
+      </style>
+    <style>
+      /* Modern active link for burger menu overlay */
+      .mobile-nav-list a.active {
+        color: #1f1f45;
+        font-weight: 700;
+        position: relative;
+        background: #fff;
+        z-index: 1;
+        padding-left: 38px;
+      }
+      .mobile-nav-list a.active::before {
+        content: '';
+        position: absolute;
+        left: 10px; top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background: url('image/datafilroundlogo.png') no-repeat center center / contain;
+        border-radius: 50%;
+        box-shadow: none;
+        z-index: 2;
+      }
+      .mobile-nav-list a.active::after {
+        display: none;
+      }
+    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - DataFil</title>
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="contactuspart1.css" />
+  <link rel="stylesheet" href="contactuspart2.css" />
+  <link rel="stylesheet" href="contactus-fixed.css" />
+  <link rel="stylesheet" href="search.css" />
+  <link rel="stylesheet" href="testimoniallink.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+   
+
+  <script src="nav.js" defer></script>
+
+
+  <meta property="og:title" content="DataFil - Virtual Assistance Services" />
+  <meta property="og:description" content="Connecting continents and building dreams." />
+  <meta property="og:image" content="https://datafil-va.com/image/previewimage.png" />
+  <meta property="og:url" content="https://datafil-va.com" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DataFil - Virtual Assistance Services" />
+  <meta name="twitter:description" content="Connecting continents and building dreams." />
+  <meta name="twitter:image" content="https://datafil-va.com/image/previewimage.png" />
+</head>
+
+<body>
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="image/datafillogo.png" alt="DataFil Logo" />
+    </a>
+  </div>
+  <!-- Nav buttons -->
+  <nav class="nav-buttons" id="navButtons">
+    <a href="index.html" ><button><span>HOME</span></button></a>
+    <a href="aboutus.html"><button><span>ABOUT US</span></button></a>
+    <a href="ai-annotation.html"><button><span>AI ANNOTATION</span></button></a>
+    <a href="howitworks.html"><button><span>HOW IT WORKS</span></button></a>
+    <a href="faq.html"><button><span>FAQ</span></button></a>
+    <a href="contactus.html" class="active"><button><span>CONTACT US</span></button></a>
+  </nav>
+
+  <!-- Right side: search button + burger menu -->
+  <div class="navbar-right">
+    <button id="searchIcon" class="search-icon">
+      <img src="image/searchicon.png" alt="Search" />
+    </button>
+    <div class="burger" id="burgerMenu">☰</div>
+  </div>
+</header>
+
+<!-- Full-screen search overlay -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-box">
+    <input type="text" id="overlaySearchInput" placeholder="Type keywords to search..." />
+    <button id="overlaySearchButton">
+      <img src="image/searchicon3.png" alt="Search" />
+    </button>
+  </div>
+</div>
+
+<!-- Optional container for search results if you want inline results -->
+<div id="searchResultsContainer" style="display:none;"></div>
+
+<!-- Modern, organized mobile burger menu overlay -->
+<div id="mobileNavOverlay" class="mobile-nav-overlay">
+  <nav class="mobile-nav-content">
+    <button id="closeMobileNav" class="close-mobile-nav" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="ai-annotation.html">AI Annotation</a></li>
+      <li><a href="howitworks.html">How It Works</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+    <section class="client-stories-bar">
+  <a href="index.html#testimonials" class="client-stories-link">
+    Read our client stories to see how we deliver
+  </a>
+</section>
+<script>
+// Hide/show banner on scroll for mobile/tablet
+(function() {
+  var banner = document.querySelector('.client-stories-bar');
+  if (!banner) return;
+  var lastScroll = window.scrollY;
+  var ticking = false;
+  function onScroll() {
+    if (window.innerWidth > 1024) {
+      banner.style.transform = '';
+      banner.style.transition = '';
+      banner.style.display = '';
+      return;
+    }
+    var currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && currentScroll > 10) {
+      // Scrolling down
+      banner.style.transform = 'translateY(-100%)';
+      banner.style.transition = 'transform 0.3s';
+    } else {
+      // Scrolling up
+      banner.style.transform = 'translateY(0)';
+      banner.style.transition = 'transform 0.3s';
+    }
+    lastScroll = currentScroll;
+  }
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  // On resize, reset banner
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 1024) {
+      banner.style.transform = '';
+      banner.style.transition = '';
+      banner.style.display = '';
+    }
+  });
+})();
+</script>
+</section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-image">
+        <img src="image/virtualagentpic.png" alt="Contact Visual" />
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Tell us what you need, and we’ll find the right fit.</h2>
+        <p>In your message, please describe the type of support or services you’re looking for. This helps us tailor our recommendations and match you with a qualified virtual assistant who fits your specific business needs.</p>
+
+        <form action="https://formsubmit.co/datafilusa@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://datafil-va.com/thank-you.html">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting DataFil. We'll get back to you as soon as possible!">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="name" value="DataFil Inquiry" />
+
+          <div class="form-row">
+            <input type="text" name="firstname" placeholder="First Name *" required />
+            <input type="text" name="lastname" placeholder="Last Name *" required />
+          </div>
+
+          <div class="form-row">
+            <input type="text" name="industry" placeholder="Enter your industry or occupation" />
+          </div>
+
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Email *" required />
+            <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+          </div>
+
+          <div class="form-row">
+            <textarea name="message" placeholder="Message *" required></textarea>
+          </div>
+
+          <div class="send-btn-wrapper">
+            <button type="submit" class="send-btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info-section" style="position:relative;">
+    <div class="contact-info-container" style="position:relative;z-index:1;">
+      <div id="contactParticles" style="position:absolute;inset:0;z-index:0;width:100%;height:100%;"></div>
+      <div class="contact-item">
+        <span style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+          <img src="image/phoneiconcontactus.png" alt="Phone Icon" />
+          <span>+63 28 654 1753</span>
+          <a href="https://wa.me/639267352551" target="_blank" style="display: flex; align-items: center; text-decoration: none; margin-left: 12px;">
+            <img src="image/contactuswhatsappicon.png" alt="WhatsApp Icon" style="height: 22px; width: 22px;" />
+            <span style="margin-left: 4px; display: flex; flex-direction: column; align-items: center; position: relative; top: 10px;">
+              <span style="display: block; text-align: center;">63 926 735 2551</span>
+              <span style="font-style: italic; color: #888; font-size: 0.78em; margin-top: -2px; display: block; text-align: center; width: max-content;">Whatsapp</span>
+            </span>
+          </a>
+        </span>
+      </div>
+      <div class="contact-item">
+        <a href="mailto:datafilusa@gmail.com" class="mobile-email-link">
+          <img src="image/emailicon.png" alt="Email Icon" />
+          <span>datafilusa@gmail.com</span>
+        </a>
+      </div>
+      <div class="contact-item">
+        <img src="image/locationicon.png" alt="Location Icon" />
+        <span style="display:inline-block; margin-top:26px;">Makati City, Metro Manila,<br>Philippines, 1226</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" style="padding-bottom: 40px;">
+  <div class="footer-flex-row">
+    <div class="footer-logo" style="display: flex; align-items: center; justify-content: center; min-width: 120px;">
+      <a href="index.html" style="display:inline-block;"><img src="image/datafilwhitelogo.png" alt="DataFil White Logo" style="height: 48px; width: auto; cursor: pointer;" /></a>
+    </div>
+    <div class="footer-nav-grid" style="margin: 0 32px;">
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="index.html" class="footer-nav-link">Home</a></div>
+        <div class="footer-nav-cell"><a href="aboutus.html" class="footer-nav-link">About us</a></div>
+      </div>
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="ai-annotation.html" class="footer-nav-link">AI Annotation</a></div>
+        <div class="footer-nav-cell"><a href="howitworks.html" class="footer-nav-link">How it works</a></div>
+      </div>
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="faq.html" class="footer-nav-link">FAQ</a></div>
+        <div class="footer-nav-cell"><a href="contactus.html" class="footer-nav-link">Contact us</a></div>
+      </div>
+    </div>
+    <div class="footer-info-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; min-width: 220px;">
+      <div class="footer-contact-row" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 10px;">
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <img class="footer-landline-icon" src="image/footerphoneicon.png" alt="Landline Phone Icon" style="width:36px; height:36px; display:inline-block; object-fit:cover; background:#fff; border-radius:50%; vertical-align:middle; transition: transform 0.18s;" onmouseover="this.src='image/footerphoneiconyellow.png'; this.style.transform='scale(1.18)';" onmouseout="this.src='image/footerphoneicon.png'; this.style.transform='none';" />
+          <span style="color: #fff; font-size: 0.98rem;">+63 28 654 1753</span>
+        </span>
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <a href="https://wa.me/639267352551" target="_blank" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+            <img src="image/footerwhatsappicon.png" alt="WhatsApp Icon" style="width:36px; height:36px; display:inline-block; object-fit:cover; background:#fff; border-radius:50%; vertical-align:middle; transition: transform 0.18s;" onmouseover="this.src='image/footerwhatsappiconyellow.png'; this.style.transform='scale(1.18)';" onmouseout="this.src='image/footerwhatsappicon.png'; this.style.transform='none';" />
+            <span style="display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; margin-top: 14px;">
+              <span style="color: #fff; font-size: 0.98rem; cursor:pointer;">63 926 735 2551</span>
+              <span style="font-style: italic; color: #b0b0b0; font-size: 0.82em; margin-top: 2px;">Whatsapp</span>
+            </span>
+          </a>
+        </span>
+      </div>
+      <!-- Second row: Copyright and social icons -->
+      <div class="footer-bottom-row" style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 24px;">
+        <div class="footer-copyright" style="color: #fff; font-size: 0.72rem;">© 2025 DataFil. All Rights Reserved.</div>
+        <div class="footer-social-row" style="display: flex; flex-direction: row; align-items: center; gap: 18px;">
+          <a href="https://www.facebook.com/profile.php?id=61576732066938" target="_blank" class="social-icon" aria-label="Facebook">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="12" cy="12" r="12" fill="#ffffff"/>
+               <path fill="#2d2d62" d="M15.12 8.59h-1.38c-.19 0-.42.25-.42.59v1.21h1.8l-.26 2.06
+                 h-1.54v5.29h-2.13v-5.29H9.89v-2.06h1.4v-1.43c0-1.14.77-2.05
+                 2.03-2.05h1.8v2.68z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/datafil-virtual-assistance-0a7a06371/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="12" cy="12" r="12" fill="#ffffff"/>
+               <path fill="#2d2d62" d="M8.54 17.25H6.45V10.5h2.09v6.75zM7.5 9.54c-.67 0-1.2-.54-1.2-1.21
+                 0-.67.53-1.21 1.2-1.21.66 0 1.2.54 1.2 1.21 0 .67-.54 1.21-1.2
+                 1.21zm10.05 7.71h-2.08v-3.27c0-.78-.01-1.79-1.09-1.79s-1.26.86-1.26
+                 1.73v3.33h-2.08V10.5h2v.91h.03c.28-.52.97-1.09 2-1.09 2.14
+                 0 2.53 1.41 2.53 3.25v3.68z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+
+    .footer-landline-icon {
+      transition: filter 0.18s;
+    }
+    .footer-landline-hover:hover .footer-landline-icon {
+      content: url('image/footerphoneiconyellow.png');
+    }
+    .footer-flex-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 48px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .footer-logo {
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0 32px;
+      margin: 0 32px;
+      width: 320px;
+      max-width: 100%;
+    }
+    .footer-nav-row {
+      display: contents;
+    }
+    .footer-nav-cell {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 120px;
+      min-height: 36px;
+    }
+    .footer-nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem !important;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: color 0.18s;
+      position: relative;
+      padding: 0 6px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .footer-nav-link:hover, .footer-nav-link:focus {
+      color: #FFD700;
+    }
+    .footer-nav-link::after {
+      display: none;
+    }
+    .footer-nav-link:hover::after, .footer-nav-link:focus::after {
+      opacity: 1;
+    }
+    .footer-info-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px;
+      min-width: 220px;
+    }
+    .footer-top p {
+      font-size: 0.98rem;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+    .footer-bottom {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .footer-phone-main {
+      font-size: 0.98rem;
+    }
+    .footer-social-row {
+      gap: 12px !important;
+    }
+    .footer-contact-row span,
+    .footer-contact-row span span,
+    .footer-contact-row span span span {
+      font-size: 0.82rem !important;
+    }
+    .footer-contact-row span[style*="font-style: italic"],
+    .footer-copyright {
+      font-size: 0.72rem !important;
+    }
+    .footer-social-row .social-icon svg circle {
+      transition: fill 0.18s;
+    }
+    .footer-social-row .social-icon:hover svg circle {
+      fill: #FFD700;
+    }
+    @media (max-width: 1024px) {
+      .footer-flex-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .footer-nav-grid {
+        align-items: center;
+        margin: 0 0 12px 0;
+      }
+      .footer-info-col {
+        align-items: center;
+        min-width: 0;
+      }
+      .footer-logo {
+        margin-bottom: 12px;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-social-row {
+        justify-content: center !important;
+        width: 100%;
+        margin-left: 0 !important;
+      }
+      .footer-nav-cell { min-width: 60px; font-size: 0.92rem; }
+      .footer-nav-link { font-size: 0.92rem; }
+      .footer-flex-row { gap: 10px; }
+    }
+    @media (min-width: 600px) and (max-width: 1024px) {
+      .footer-nav-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        margin: 0 auto 12px auto !important;
+        gap: 0 18px !important;
+      }
+      .footer-nav-cell {
+        min-width: 0 !important;
+        justify-content: flex-start !important;
+      }
+      .footer-social-row {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+</footer>
+
+<!-- tsParticles background for contact info -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('contactParticles');
+  if (window.tsParticles && container) {
+    tsParticles.load('contactParticles', {
+      fullScreen: { enable: false },
+      background: { color: 'transparent' },
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: ['#ffd700', '#bfa14a', '#2d2d62', '#fffbe6'] },
+        shape: { type: ['circle', 'polygon'], polygon: { nb_sides: 6 } },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: { enable: true, minimumValue: 1 } },
+        move: { enable: true, speed: 1.2, direction: 'none', outModes: 'out' },
+        links: { enable: true, distance: 120, color: '#ffd700', opacity: 0.2, width: 1 }
+      },
+      interactivity: {
+        events: { onHover: { enable: true, mode: 'repulse' }, onClick: { enable: true, mode: 'push' } },
+        modes: { repulse: { distance: 80 }, push: { quantity: 4 } }
+      },
+      detectRetina: true
+    });
+  }
+});
+</script>
+<script>
+// Modern highlight for active link in burger menu overlay
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.mobile-nav-list a');
+  var path = window.location.pathname.split('/').pop();
+  if (!path) path = 'index.html';
+  links.forEach(function(link) {
+    if (link.getAttribute('href') === path) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+<script>
+  const phoneLink = document.querySelector('.footer-phone');
+  if (window.innerWidth >= 768 && phoneLink) {
+    phoneLink.addEventListener('click', (e) => {
+      e.preventDefault();
+    });
+  }
+</script>
+
+<script>
+// Modern burger menu functionality (organized, no extra gap)
+const burger = document.getElementById('burgerMenu');
+const overlay = document.getElementById('mobileNavOverlay');
+const closeBtn = document.getElementById('closeMobileNav');
+
+function openMobileNav() {
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+if (burger && overlay && closeBtn) {
+  burger.addEventListener('click', openMobileNav);
+  closeBtn.addEventListener('click', closeMobileNav);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMobileNav();
+  });
+}
+</script>
+
+<style>
+/* Overlay styles (unchanged) */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(45,45,98,0.97);
+  z-index: 12000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.mobile-nav-overlay.open {
+  display: flex;
+  opacity: 1;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.mobile-nav-content {
+  width: 84vw;
+  max-width: 340px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -8px 0 32px rgba(45,45,98,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  animation: slideInNav 0.32s cubic-bezier(.4,2,.6,1);
+}
+@keyframes slideInNav {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(0); }
+}
+.close-mobile-nav {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #2d2d62;
+  margin: 18px 18px 0 0;
+  cursor: pointer;
+  align-self: flex-end;
+  z-index: 12001;
+  padding: 0;
+  line-height: 1;
+}
+.mobile-nav-list {
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 32px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.mobile-nav-list li {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mobile-nav-list li:last-child {
+  border-bottom: none;
+}
+.mobile-nav-list a {
+  display: flex;
+  align-items: center;
+  color: #2d2d62;
+  font-size: 1.18rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 18px 32px 18px 38px;
+  width: 100%;
+  transition: background 0.18s, color 0.18s;
+  letter-spacing: 0.01em;
+}
+.mobile-nav-list a:hover {
+  background: #f8cf40;
+  color: #1f1f45;
+}
+/* --- Social icons always in a row --- */
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footer-social-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .footer-bottom {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .footer-social-row {
+    gap: 12px;
+  }
+}
+</style>
+</body>
+</html>

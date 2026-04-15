@@ -1,0 +1,571 @@
+@media (max-width: 1000px) {
+    /* Remove pseudo-elements for pill and dotted shapes on mobile/tablet */
+    .va-card::before,
+    .va-card::after {
+      display: none !important;
+      content: none !important;
+    }
+    /* Pill shape for image container */
+    .va-left {
+      background:
+        linear-gradient(#2d2d62, #2d2d62) padding-box,
+        linear-gradient(135deg,
+          #fffbe6 0%,
+          #ffe066 10%,
+          #ffd700 30%,
+          #bfa14a 60%,
+          #a67c00 80%,
+          #fffbe6 100%
+        ) border-box !important;
+      border: 3px solid transparent !important;
+      border-right: none !important;
+      border-radius: 225px 0 0 225px !important;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08) !important;
+      width: 95% !important;
+      max-width: 520px !important;
+      margin: 0 auto 32px auto !important;
+      min-height: 320px !important;
+      height: 320px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: flex-end !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+    .va-left img {
+      width: 88%;
+      height: auto;
+      max-height: 95%;
+      object-fit: contain;
+      object-position: bottom center;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+      border-radius: 225px 0 0 225px;
+      box-sizing: border-box;
+    }
+    /* Dotted rectangle for text container */
+    .va-right {
+      border: 3px dotted #d4a903 !important;
+      border-left: 3px dotted #d4a903 !important;
+      border-radius: 0 0 180px 0 !important;
+      background: transparent !important;
+      width: 90% !important;
+      max-width: 400px !important;
+      margin: 0 auto !important;
+      padding: 40px 30px 30px !important;
+      box-sizing: border-box !important;
+      z-index: 3 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+      transform: none !important;
+      background-clip: padding-box !important;
+    }
+  .va-card {
+    flex-direction: column;
+    min-height: 700px;
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+  }
+  .va-card::before,
+  .va-card::after {
+    display: none !important;
+  }
+  .va-left {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 24px auto;
+    border-radius: 225px 0 0 225px;
+    overflow: hidden;
+    background: linear-gradient(#2d2d62, #2d2d62) padding-box, linear-gradient(135deg, #f8cf40 0%, #ffd700 25%, #3a3a7e 75%, #2d2d62 100%) border-box;
+    border: 3px solid transparent;
+    border-right: none;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 220px;
+    height: 220px;
+    position: relative;
+    z-index: 2;
+  }
+  .va-left img {
+    width: 75%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+    border-radius: 225px 0 0 225px;
+    box-sizing: border-box;
+  }
+  .va-right {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 30px 30px;
+    border: 3px dotted #d4a903;
+    border-left: 3px dotted #d4a903;
+    border-radius: 0 0 180px 0;
+    background: transparent;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    box-sizing: border-box;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400&family=Open+Sans:wght@400;700&display=swap');
+
+/* ========== VA Stories Section ========== */
+.va-stories {
+  padding: 0 20px 80px 20px !important;
+  margin-bottom: 80px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.va-stories::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(248, 207, 64, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* VA Title */
+.va-title {
+  text-align: center;
+  font-size: 38px;
+  margin-top: 0 !important;
+  margin-bottom: 48px !important;
+  color: #2d2d62;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+}
+
+.va-title-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.va-title-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: inline-block;
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+  50% { 
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  }
+}
+
+/* ========== VA Stories Container ========== */
+.va-stories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ✅ VA Card */
+.va-card {
+  position: relative;
+  display: flex;
+  background: transparent;
+  min-height: 450px;
+  padding: 0;
+  transition: all 0.4s ease;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Restore pill shape */
+.va-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  border: 3px solid transparent;
+    border-right: none;
+    border-radius: 225px 0 0 225px;
+    background:
+      linear-gradient(#2d2d62, #2d2d62) padding-box,
+      linear-gradient(135deg,
+        #fffbe6 0%,
+        #ffe066 8%,
+        #ffd700 18%,
+        #fffbe6 22%, /* highlight streak */
+        #ffd700 28%,
+        #bfa14a 55%,
+        #a67c00 80%,
+        #fffbe6 100%
+      ) border-box;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Restore dotted box */
+.va-card::after {
+  content: '';
+  position: absolute;
+  left: 38%;
+  top: 30px;
+  width: 62%;
+  height: calc(100% - 30px + 30px);
+  border: 3px dotted #d4a903;
+  border-left: 3px dotted #d4a903;
+  border-radius: 0 0 180px 0;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ✅ PREVENT expansion on hover when story is expanded */
+.va-card.story-expanded {
+  transform: none !important; /* ✅ disable hover animation when expanded */
+}
+
+/* Only keep the original .va-card::before and .va-card::after definitions (desktop) */
+
+/* ========== Left: Image Side ========== */
+.va-left {
+  flex: 0 0 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: transparent;
+  overflow: hidden; /* ✅ CHANGED back from visible to hidden - clips image to pill boundaries */
+  border-radius: 225px 0 0 225px;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  line-height: 0;
+  font-size: 0;
+}
+
+.va-left::before {
+  display: none;
+}
+
+.va-left img {
+  width: 80%;
+  height: auto;
+  max-height: 100%; /* ✅ Allow full height within container */
+  object-fit: contain;
+  object-position: bottom center; /* ✅ Anchors to bottom */
+  display: block;
+  z-index: 4;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+  transition: transform 0.5s ease;
+  position: absolute;
+  bottom: 0; /* ✅ Touches bottom line of pill */
+  left: 58%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  max-width: 80%; /* ✅ Ensure image stays within pill width */
+}
+
+
+.va-left h3 {
+  position: absolute;
+  bottom: 30px;
+  left: 58%; /* ✅ CHANGED: matches image's left position for proper centering */
+  transform: translateX(-50%);
+  z-index: 5;
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+/* ========== Right: Story Text + Button ========== */
+.va-right {
+  flex: 1;
+  padding: 50px 50px 40px 80px; /* ✅ CHANGED: increased left padding from 20px to 80px to move content right and away from pill */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  z-index: 2;
+  margin-left: 0; /* ✅ ensure no negative margin */
+  margin-right: 0; /* ✅ ensure proper right spacing */
+}
+
+.va-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f8cf40;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.va-story-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d2d62;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.va-snippet {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.va-full-story {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.va-full-story.expanded {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.va-full-story p {
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe066 10%, #ffd700 30%, #bfa14a 70%, #a67c00 100%);
+  color: #2d2d62;
+  padding: 16px 38px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+  align-self: flex-end;
+  margin-top: 16px;
+  box-shadow: 0 4px 24px 0 rgba(191, 161, 74, 0.25), 0 1.5px 8px 0 rgba(166, 124, 0, 0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more-btn .arrow {
+  display: inline-block;
+  opacity: 0.35;
+  visibility: visible;
+  font-size: 18px;
+  transition: transform 0.3s, opacity 0.3s;
+  margin-left: 2px;
+  color: #2d2d62;
+}
+
+.read-more-btn:hover .arrow {
+  opacity: 1;
+}
+
+.read-more-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.read-more-btn:hover {
+  background: linear-gradient(135deg, #fffbe6 10%, #ffd700 40%, #fffbe6 90%);
+  color: #a67c00;
+  box-shadow: 0 6px 32px 0 rgba(255, 215, 0, 0.25), 0 2px 12px 0 rgba(166, 124, 0, 0.18);
+}
+
+.read-more-btn:hover {
+  background: linear-gradient(135deg, #f8cf40 0%, #ffd700 100%);
+  color: #2d2d62;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(248, 207, 64, 0.4);
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 1000px) {
+  .va-title {
+    margin-top: 40px !important;
+  }
+  .va-card {
+    flex-direction: column;
+    min-height: 850px;
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* No override for .va-card::before or .va-card::after here; use desktop styles for both containers at all breakpoints */
+
+  /* ✅ Text container - INSIDE dotted box, positioned absolutely */
+  .va-right {
+    position: absolute;
+    top: 460px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px 30px 30px;
+    border: none;
+    background: transparent;
+    z-index: 1;
+  }
+
+  /* ✅ CRITICAL: Reset ALL desktop positioning */
+  .va-left img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    display: block !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 4 !important;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+    max-width: 100% !important;
+    border-radius: 225px 0 0 225px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ✅ Name label - above image */
+  .va-left h3 {
+    position: absolute !important;
+    left: 50% !important; /* ✅ FORCE override */
+    right: auto !important; /* ✅ clear any right */
+    transform: translateX(-50%) !important; /* ✅ FORCE center */
+    bottom: 30px !important;
+    z-index: 5 !important;
+    display: block !important;
+  }
+
+  .va-story-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .va-title {
+    font-size: 24px;
+    margin-top: 32px !important;
+  }
+
+  .va-title-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .va-card {
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+    .va-left {
+      min-height: 280px;
+      border-radius: 80px 0 0 80px;
+      overflow: hidden !important;
+    }
+
+    .va-left img {
+      max-height: 280px;
+      width: 100% !important;
+      max-width: 100% !important;
+      border-radius: 80px 0 0 80px !important;
+      box-sizing: border-box !important;
+    }
+
+  .va-left h3 {
+    font-size: 22px;
+  }
+
+  .va-story-title {
+    font-size: 20px;
+  }
+
+  .va-snippet {
+    font-size: 14px;
+  }
+
+  .va-full-story p {
+    font-size: 13px;
+  }
+
+  .read-more-btn {
+    font-size: 13px;
+    padding: 10px 24px;
+  }
+}

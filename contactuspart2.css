@@ -1,0 +1,226 @@
+/* Remove underline from email link */
+.mobile-email-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh; /* ✅ ensure full viewport height */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif, Arial;
+  background-color: #ffffff;
+  color: #2d2d62;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ✅ body must be at least full screen */
+}
+
+/* Main takes available vertical space */
+main {
+  flex: 1 0 auto; /* ✅ grow to fill space, don't shrink, auto basis */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ✅ changed from space-between */
+  width: 100%;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent !important;
+  padding: 40px 20px 0 20px;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  min-height: 0;
+}
+
+
+#contactParticles {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  display: block;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  min-height: 120px;
+}
+
+/* Default layout for desktop */
+.contact-item img {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px #ffd70044);
+}
+
+.contact-item span {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 600;
+  color: #2d2d62;
+  letter-spacing: 0.2px;
+  white-space: normal;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* Remove link styling (no underline or color change) */
+.mobile-call-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
+}
+
+/* Toll Free Badge Styling */
+.toll-free-badge {
+  margin-left: 2px;
+  padding: 0;
+  background: none;
+  color: #2d2d62 !important;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  border-radius: 0;
+  letter-spacing: 0.2px;
+  box-shadow: none;
+  vertical-align: baseline;
+  position: static;
+}
+
+/* Tablet Padding Tweak */
+@media (min-width: 1300px) {
+  .contact-info-section {
+    padding-bottom: 0 !important;
+    min-height: 0 !important;
+    background: transparent !important;
+  }
+}
+
+/* ✅ Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .contact-info-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contact-item img {
+    margin: 0 0 10px 0;
+  }
+
+  /* Keep phone icon and number in a row on mobile */
+  .contact-item .mobile-call-link {
+    flex-direction: row !important;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    pointer-events: auto;
+    justify-content: center;
+  }
+
+  .contact-item .mobile-call-link img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
+
+  .contact-item .mobile-call-link span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2d2d62;
+    letter-spacing: 0.2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info-section {
+    padding: 24px 4vw;
+  }
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .contact-item img {
+    margin-bottom: 4px;
+  }
+  .contact-item span {
+    font-size: 15px;
+  }
+  .mobile-call-link {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Footer (optional) */
+.footer {
+  flex-shrink: 0; /* ✅ prevent footer from shrinking */
+  background-color: #2d2d62;
+  padding: 15px 20px;
+  color: white;
+  width: 100%;
+  margin-top: auto; /* ✅ push footer to bottom */
+}

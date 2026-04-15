@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+/* ================== Centered Responsive Video ================== */
+.howitworks-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: transparent !important;
+  width: 100vw;
+  margin: 0 auto;
+  min-height: 0;
+  margin-bottom: 32px !important;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  left: unset;
+  right: unset;
+  margin-left: unset;
+  margin-right: unset;
+  background: transparent !important; /* Explicitly set background to transparent */
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.video-wrapper video {
+  width: 90%;
+  max-width: 100%;
+  max-height: 500px; /* ✅ increased from 320px */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* ================== Overlay CTA + Toll Free ================== */
+.howitworks-overlay {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-40%);
+  text-align: left;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; /* ✅ increased from 15px */
+}
+
+/* ================== Button ================== */
+.hero-button {
+  display: inline-block;
+  padding: 16px 48px;
+  background: linear-gradient(90deg, #ffd700 0%, #bfa14a 60%, #fffbe6 100%);
+  color: #2d2d62;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 24px rgba(248,207,64,0.18), 0 2px 8px rgba(45,45,98,0.08);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: background 0.4s, box-shadow 0.3s, transform 0.2s;
+  overflow: hidden;
+  min-width: 220px; /* ✅ set a fixed minimum width */
+  text-align: center; /* ✅ center the text */
+}
+
+.hero-button::after {
+  content: none; /* ✅ remove the icon */
+  display: none;
+}
+
+.hero-button:hover {
+  background: linear-gradient(90deg, #fffbe6 0%, #ffd700 40%, #bfa14a 100%);
+  color: #2d2d62;
+  box-shadow: 0 6px 32px rgba(248,207,64,0.28), 0 4px 16px rgba(45,45,98,0.12);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* ================== Toll-free text with icon ================== */
+.tollfree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.tollfree,
+.tollfree:link,
+.tollfree:visited,
+.tollfree:hover,
+.tollfree:active,
+.tollfree:focus {
+  text-decoration: none !important;
+  color: white !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-decoration: none;
+  color: white; /* ✅ ensure white text */
+  cursor: default; /* ✅ default cursor on desktop */
+}
+
+.call-main-line {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ✅ increased from 8px */
+}
+
+.call-icon {
+  width: 28px; /* ✅ increased from 24px */
+  height: 28px;
+  flex-shrink: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.call-main {
+  font-size: 1.3rem; /* ✅ increased from 1.1rem */
+  font-weight: 600;
+  color: white; /* ✅ white text */
+}
+
+.call-sub {
+  font-size: 1.0rem; /* ✅ increased from 0.9rem */
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  color: #F5F5DC;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hide clickable version on desktop */
+.call-mobile { display: none; }
+.call-desktop { display: flex; }
+
+/* ================== Responsive adjustments ================== */
+@media (max-width: 1024px) {
+  .call-desktop { display: none; }
+  .call-mobile { display: flex; }
+
+  .call-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  .call-mobile .call-main-line {
+    align-items: center;
+  }
+
+  .call-mobile .call-icon,
+  .call-mobile .call-main,
+  .call-mobile .call-sub {
+    pointer-events: none;
+  }
+
+  .call-mobile .call-sub {
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .howitworks-video {
+    padding: 12px 0 12px 0 !important;
+    min-height: 0 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .video-wrapper video {
+    width: 85%;
+    max-height: 450px;
+  }
+
+  .hero-button {
+    font-size: 1.1rem;
+    padding: 14px 35px;
+  }
+
+  .call-main {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-wrapper {
+    max-width: 100%;
+    left: unset;
+    right: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .video-wrapper video {
+    width: 85%;
+    @media (max-width: 600px) {
+      .video-wrapper {
+        max-width: 100%;
+        left: unset;
+        right: unset;
+        margin-left: unset;
+        margin-right: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+      }
+      .video-wrapper video {
+        width: 96vw;
+        max-width: 96vw;
+        max-height: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 2px 16px rgba(45,45,98,0.08);
+      }
+
+      .howitworks-overlay {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-40%);
+        align-items: center;
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+
+      .hero-button {
+        font-size: 1.0rem;
+        padding: 12px 24px;
+      }
+
+      .tollfree {
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .call-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .call-main {
+        font-size: 1.1rem;
+      }
+
+      .call-sub {
+        font-size: 0.9rem;
+      }
+
+      .howitworks-video {
+        padding: 12px 0 12px 0 !important;
+        min-height: 0 !important;
+        margin-bottom: 16px !important;
+      }
+    }
+  max-width: 100%;
+  width: 100%;
+      .howitworks-video {
+        padding: 12px 0 12px 0 !important;
+        min-height: 0 !important;
+        margin-bottom: 16px !important;
+      }
+      .video-wrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        max-width: 100vw;
+      }
+      .video-wrapper video {
+        max-width: 96vw;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 2px 16px rgba(45,45,98,0.08);
+      }
+      .howitworks-overlay {
+        margin-top: 8px;
+        margin-bottom: 0;
+        align-items: center;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%,-40%);
+      }
+    }
+}
+
+.va-stories-right .video-wrapper video {
+  width: 100%;
+  max-height: 700px; /* ✅ increased from 600px for better proportion */
+  border-radius: 24px;
+}
+
+/* ✅ Fix overlay positioning - LEFT HALF of video */
+.va-stories-right .howitworks-overlay {
+  position: absolute;
+  top: 60%; /* ✅ moved down from 50% */
+  left: 10%; /* ✅ moved more left from 15% */
+  transform: translateY(-50%); /* ✅ vertical centering only */
+  text-align: left; /* ✅ left-align text */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ align items to left */
+  gap: 15px; /* ✅ reduced gap */
+}
+
+/* ✅ Smaller button for sidebar */
+.va-stories-right .hero-button {
+  padding: 10px 24px; /* ✅ smaller padding */
+  font-size: 0.9rem; /* ✅ smaller font */
+}
+
+/* ✅ Sidebar variant - single phone element styling */
+.va-stories-right .call-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-decoration: none;
+  color: white; /* ✅ ensure white text */
+  cursor: default; /* ✅ default cursor on desktop */
+}
+
+.va-stories-right .call-main-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.va-stories-right .call-main {
+  font-size: 1.0rem;
+  color: white; /* ✅ white text */
+  font-weight: 600;
+}
+
+.va-stories-right .call-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.va-stories-right .call-sub {
+  font-size: 0.85rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #F5F5DC; /* ✅ light beige for "toll free" */
+  font-style: italic;
+}
+
+/* ✅ Make clickable on mobile/tablet */
+@media (max-width: 1024px) {
+  .va-stories-right .call-text {
+    cursor: pointer; /* ✅ clickable on mobile */
+  }
+  
+  /* ✅ Convert to clickable link */
+  .va-stories-right .howitworks-overlay .call-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

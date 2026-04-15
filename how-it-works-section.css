@@ -1,0 +1,15 @@
+.workflow-arrow svg {
+  overflow: visible !important;
+  z-index: 2;
+}
+
+.workflow-arrow {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Ensure parent containers do not crop the SVG */
+.how-it-works-section, .workflow-steps, .workflow-step {
+  overflow: visible !important;
+}

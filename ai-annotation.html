@@ -1,0 +1,2757 @@
+</style>
+<style>
+          /* --- FINAL CONTAINMENT FIX: Ensure banner gradient never leaks below --- */
+          .client-stories-bar {
+            isolation: isolate !important;
+            will-change: transform;
+          }
+        /* --- CRITICAL FIX: Always contain banner gradient --- */
+        .client-stories-bar {
+          position: relative !important;
+          overflow: hidden !important;
+          z-index: 10 !important;
+        }
+      /* --- ABSOLUTE FIX: Prevent .client-stories-bar::before gradient from leaking into carousel/collage --- */
+      .video-wrapper::before,
+      .video-wrapper::after,
+      .video-container::before,
+      .video-container::after,
+      .staggered-collage-wrapper::before,
+      .staggered-collage-wrapper::after {
+        content: none !important;
+        display: none !important;
+        background: none !important;
+        background-image: none !important;
+        animation: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    /* --- REMOVE YELLOW GRADIENT ANIMATION FROM CAROUSEL ON ALL DEVICES --- */
+    .video-wrapper,
+    .video-container,
+    .staggered-collage-wrapper,
+    .video-wrapper::before,
+    .video-wrapper::after,
+    .video-container::before,
+    .video-container::after,
+    .staggered-collage-wrapper::before,
+    .staggered-collage-wrapper::after {
+      background: transparent !important;
+      background-image: none !important;
+      animation: none !important;
+      box-shadow: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      z-index: 0 !important;
+    }
+    /* Remove any stray gradients from parent containers on mobile/tablet */
+    @media (max-width: 1200px) {
+      .video-wrapper,
+      .video-container,
+      .staggered-collage-wrapper,
+      .video-wrapper::before,
+      .video-wrapper::after,
+      .video-container::before,
+      .video-container::after,
+      .staggered-collage-wrapper::before,
+      .staggered-collage-wrapper::after {
+        background: transparent !important;
+        background-image: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+        z-index: 0 !important;
+      }
+    }
+  /* Hide yellow video-glow gradient on tablet and mobile */
+  @media (max-width: 1200px) {
+    .video-glow {
+      display: none !important;
+      background: none !important;
+    }
+  }
+</style>
+<!-- All CSS previously before <!DOCTYPE html> moved below into <head> for proper rendering -->
+                                  <!-- ...existing code... -->
+<style>
+                @media (max-width: 1024px) {
+                  .footer-phone {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                    gap: 4px !important;
+                    min-width: 120px !important;
+                    margin-left: auto !important;
+                  }
+                  .footer-phone-main {
+                    display: flex !important;
+                    align-items: center !important;
+                    gap: 6px !important;
+                  }
+                  .toll-free-text {
+                    font-size: 0.95em !important;
+                    color: #ffd700 !important;
+                    margin-left: 0 !important;
+                    margin-top: 2px !important;
+                    align-self: center !important;
+                    text-align: center !important;
+                    width: 100% !important;
+                  }
+                }
+                @media (max-width: 1024px) {
+                  .footer-address-phone-row-mobile > .footer-address > span {
+                    margin-top: 0 !important;
+                  }
+                }
+    @media (min-width: 1201px) {
+      .fog-bg-effect {
+        z-index: 3;
+        background: radial-gradient(ellipse 340px 560px at 0% 38%,
+          rgba(255,255,255,0.99) 0%,
+          rgba(240,245,255,0.93) 18%,
+          rgba(230,235,255,0.88) 32%,
+          rgba(210,220,240,0.70) 54%,
+          rgba(200,210,230,0.38) 80%,
+          rgba(255,255,255,0.12) 94%,
+          rgba(255,255,255,0) 100%
+        );
+        filter: blur(38px) saturate(1.45);
+        opacity: 0.99;
+        transition: opacity 0.3s;
+      }
+          /* Ensure card grid and cards are always above fog and interactive */
+          .modern-services-grid {
+            position: relative;
+            z-index: 2;
+            pointer-events: auto !important;
+          }
+          .modern-service-card {
+            position: relative;
+            z-index: 2;
+            pointer-events: auto !important;
+          }
+          /* Ensure all parents of Section 2 are interactive */
+          #ai-data-services, .modern-services-container, .modern-services-header, .modern-services-grid, .modern-service-card, .modern-service-card *, .modern-service-card *:before, .modern-service-card *:after {
+            pointer-events: auto !important;
+            user-select: text !important;
+          }
+          /* Remove pointer-events from any fog or overlay above Section 2 */
+          .staggered-collage-wrapper::before,
+          .video-wrapper,
+          .video-container {
+            pointer-events: none !important;
+            z-index: 1 !important;
+            display: none !important;
+            content: none !important;
+            background: none !important;
+            animation: none !important;
+          }
+    }
+    @media (max-width: 1200px) {
+        .educational-section {
+          margin-top: 5rem !important;
+        }
+        .cta-helper-text {
+          margin-top: 0 !important;
+        }
+        .staggered-collage-wrapper::before {
+          display: none !important;
+          content: none !important;
+          background: none !important;
+          animation: none !important;
+        }
+    }
+</style>
+<style>
+@media (max-width: 1024px) {
+  .footer-bottom {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+  .social-icon {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+</style>
+
+<style>
+  @media (max-width: 700px) {
+    .ai-annotation-hero .stats-grid {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      justify-content: space-between !important;
+      align-items: flex-end !important;
+      gap: 0 !important;
+      width: 100% !important;
+      margin-top: 12px !important;
+    }
+    .ai-annotation-hero .stat-item {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      text-align: center !important;
+      padding: 0 2px !important;
+    }
+  @media (max-width: 700px) {
+    .ai-annotation-hero .stat-value {
+      font-size: 1.32rem !important;
+    }
+    .ai-annotation-hero .stat-label {
+      font-size: 1.02rem !important;
+    }
+  }
+</style>
+<style>
+  @media (min-width: 701px) and (max-width: 1200px) {
+      .ai-annotation-hero .button-group {
+        margin-top: 22px !important;
+      }
+    .ai-annotation-hero .content-left {
+      max-width: 900px !important;
+      width: 90vw !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    .ai-annotation-hero .description {
+      max-width: 800px !important;
+      width: 100% !important;
+      font-size: 1.15rem;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    .staggered-collage-wrapper::before {
+      display: none !important;
+      content: none !important;
+    }
+  }
+</style>
+<style>
+  /* Force badge left-aligned, only as wide as text, and starts where heading starts */
+  .ai-annotation-hero .content-left {
+    text-align: left !important;
+  }
+  .ai-annotation-hero .badge {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    position: static !important;
+    vertical-align: top !important;
+  }
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .content-left {
+      text-align: left !important;
+    }
+    .ai-annotation-hero .badge {
+      display: inline-block !important;
+      width: auto !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      box-sizing: border-box !important;
+      white-space: nowrap !important;
+      text-align: left !important;
+      position: static !important;
+      vertical-align: top !important;
+    }
+  }
+</style>
+<style>
+  /* Force full transparency for carousel area, override all backgrounds, gradients, and pseudo-elements */
+  .video-wrapper,
+  .video-container,
+  .staggered-collage-wrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .video-wrapper::before,
+  .video-wrapper::after,
+  .video-container::before,
+  .video-container::after,
+  .staggered-collage-wrapper::before,
+  .staggered-collage-wrapper::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    background-image: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+</style>
+<style>
+  /* Remove card and navy background from carousel */
+  .staggered-collage-wrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <style>
+                  /* Section separation utility */
+                  section {
+                    margin-bottom: 3.5rem;
+                  }
+                  @media (max-width: 900px) {
+                    section {
+                      margin-bottom: 2.2rem;
+                    }
+                  }
+                  @media (max-width: 600px) {
+                    section {
+                      margin-bottom: 1.2rem;
+                    }
+                  }
+                  /* Optional: add a faint separator line for clarity */
+                  .section-separator {
+                    width: 100%;
+                    height: 1px;
+                    background: linear-gradient(90deg, #e5e7eb 0%, #fff 100%);
+                    margin: 0 auto 2.5rem auto;
+                    border: none;
+                  }
+                </style>
+                <style>
+                  /* For select placeholder (first option) */
+                  .form-select option[value=""] {
+                    color: #fff !important;
+                    background: #fff !important;
+                    font-style: italic;
+                  }
+                  /* Golden to navy gradient on hover for Section 1 buttons */
+                  .ai-annotation-hero .button-group .btn-primary:hover,
+                  .ai-annotation-hero .button-group .btn-secondary:hover {
+                    background: linear-gradient(90deg, #FFD700 0%, #23235a 100%) !important;
+                    color: #fff !important;
+                    border: none !important;
+                    transition: background 0.2s, color 0.2s;
+                  }
+                  /* Force all major sections closer together */
+                  @media (max-width: 600px) {
+                    .section-title {
+                      font-size: 2.3rem !important;
+                      line-height: 1.15 !important;
+                    }
+                  }
+                  @media (max-width: 700px) {
+                    .ai-annotation-hero .description {
+                      margin-bottom: 20px !important;
+                    }
+                    .educational-section {
+                      margin-top: 6rem !important;
+                    }
+                    .ai-annotation-hero .button-group {
+                      display: flex !important;
+                      flex-direction: row !important;
+                      justify-content: flex-start !important;
+                      align-items: center !important;
+                      gap: 10px !important;
+                      width: 100% !important;
+                    }
+                    .ai-annotation-hero .button-group .btn-primary,
+                    .ai-annotation-hero .button-group .btn-secondary {
+                      min-width: 0 !important;
+                      width: 44vw !important;
+                      max-width: 180px !important;
+                      font-size: 1rem !important;
+                      padding-left: 0.5em !important;
+                      padding-right: 0.5em !important;
+                      white-space: nowrap !important;
+                    }
+                  }
+                  @media (max-width: 900px) {
+                    .modern-services-grid {
+                      justify-items: center !important;
+                    }
+                    .modern-service-card {
+                      margin-left: auto !important;
+                      margin-right: auto !important;
+                    }
+                  }
+                  html, body {
+                    width: 100% !important;
+                    max-width: 100vw !important;
+                    overflow-x: hidden !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                  }
+                  /* FORCE text selection and pointer events for Section 2 and all its children */
+                  .main-content, .main-content *,
+                  .services-section, .services-section *,
+                  .section-content, .section-content *,
+                  .section-header, .section-header *,
+                  .cards-grid, .cards-grid *,
+                  .service-card, .service-card *,
+                  .cta-wrapper, .cta-wrapper * {
+                    user-select: text !important;
+                    pointer-events: auto !important;
+                    -webkit-user-select: text !important;
+                    -moz-user-select: text !important;
+                    -ms-user-select: text !important;
+                  }
+                  @media (max-width: 600px) {
+                    section.educational-section .text-column {
+                      padding-left: 8vw !important;
+                      padding-right: 8vw !important;
+                      width: auto !important;
+                      box-sizing: border-box !important;
+                    }
+                  }
+                </style>
+            <style>
+              .gradient-text {
+                background: linear-gradient(90deg, #FFD700 0%, #FFEA70 40%, #FFD700 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+              }
+            </style>
+            <!-- Removed flexbox html/body and sticky footer styles to match working pages -->
+          <style>
+            /* Remove only the center blue/gold gradient overlay */
+            .gradient-bg {
+              display: none !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+              width: 0 !important;
+              height: 0 !important;
+            }
+          </style>
+          <!-- .decorative-blob, .blob-1, .blob-2 are left alone for now -->
+          <style>
+            @media (min-width: 1200px) {
+              .hero-section {
+                max-height: 60vh !important;
+                overflow: hidden !important;
+              }
+            }
+          </style>
+        <style>
+          .hero-section {
+            background: #fff !important;
+            min-height: 0 !important;
+            height: auto !important;
+            overflow: visible !important;
+            position: relative;
+            z-index: 1;
+          }
+          .ai-annotation-hero .container,
+          .ai-annotation-hero .grid-two-col,
+          .ai-annotation-hero .content-left,
+          .ai-annotation-hero .video-wrapper,
+          .ai-annotation-hero .video-container,
+          .ai-annotation-hero .staggered-collage-wrapper {
+            position: relative;
+            z-index: 1 !important;
+          }
+          .gradient-bg, .decorative-blob, .blob-1, .blob-2 {
+            display: none !important;
+          }
+        </style>
+      <!-- Removed custom flexbox/min-height styles to match working pages -->
+    <style>
+      /* Modern active link for burger menu overlay */
+      .mobile-nav-list a.active {
+        color: #1f1f45;
+        font-weight: 700;
+        position: relative;
+        background: #fff;
+        z-index: 1;
+        padding-left: 38px;
+      }
+      .mobile-nav-list a.active::before {
+        content: '';
+        position: absolute;
+        left: 10px; top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background: url('image/datafilroundlogo.png') no-repeat center center / contain;
+        border-radius: 50%;
+        box-shadow: none;
+        z-index: 2;
+      }
+      .mobile-nav-list a.active::after {
+        display: none;
+      }
+      /* Ensure active burger menu link is always rectangular, even on hover */
+      .mobile-nav-list a.active,
+      .mobile-nav-list a.active:hover {
+        border-radius: 0 !important;
+      }
+      /* Main nav underline for active page */
+      .nav-buttons a.active button span::before {
+        width: 100%;
+        background: #f8cf40;
+      }
+    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Data Annotation & Human-in-the-Loop Services - DataFil</title>
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="modern-enhancements.css" />
+  <link rel="stylesheet" href="homepart1.css" />
+  <link rel="stylesheet" href="homepart2.css" />
+  <link rel="stylesheet" href="homepart3.css" />
+  <link rel="stylesheet" href="homepart4.css" />
+  <link rel="stylesheet" href="homepart5.css" />
+  <link rel="stylesheet" href="banneraipage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="testimoniallink.css" />
+  <script src="nav.js" defer></script>
+<script>
+  // Minimal scroll-to-contact-form for CTA button
+  document.addEventListener('DOMContentLoaded', function() {
+    var quoteBtn = document.getElementById('requestQuoteBtn');
+    if (quoteBtn) {
+      quoteBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var contactSection = document.getElementById('contact-form-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Learn More button scrolls to Section 3 (educational-section)
+    var learnMoreBtn = document.querySelector('.btn-secondary');
+    if (learnMoreBtn) {
+      learnMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var section3 = document.querySelector('.educational-section');
+        if (section3) {
+          section3.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // 'Talk to an AI Data Specialist' button scrolls to contact form (Section 6)
+    var aiSpecialistBtn = document.querySelector('.modern-services-btn');
+    if (aiSpecialistBtn) {
+      aiSpecialistBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var contactSection = document.getElementById('contact-form-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // 'Request a Custom Team' CTA button scrolls to contact form (Section 6)
+    var customTeamBtn = document.getElementById('ctaButton');
+    if (customTeamBtn) {
+      customTeamBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var contactSection = document.getElementById('contact-form-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  });
+</script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/datafillogo.png" alt="DataFil Logo" />
+      </a>
+    </div>
+    <nav class="nav-buttons" id="navButtons">
+      <a href="index.html"><button><span>HOME</span></button></a>
+      <a href="aboutus.html"><button><span>ABOUT US</span></button></a>
+      <a href="ai-annotation.html" class="active"><button><span>AI ANNOTATION</span></button></a>
+      <a href="howitworks.html"><button><span>HOW IT WORKS</span></button></a>
+      <a href="faq.html"><button><span>FAQ</span></button></a>
+      <a href="contactus.html"><button><span>CONTACT US</span></button></a>
+    </nav>
+    <div class="navbar-right">
+      <button id="searchIcon" class="search-icon">
+        <img src="image/searchicon.png" alt="Search" />
+      </button>
+      <div class="burger" id="burgerMenu">☰</div>
+    </div>
+  </header>
+
+<!-- Client Stories Banner -->
+<section class="client-stories-bar fade-in">
+  <a href="index.html#testimonials" class="client-stories-link">
+    Read our client stories to see how we deliver
+  </a>
+</section>
+
+  <div id="searchOverlay" class="search-overlay">
+    <div class="search-box">
+      <input type="text" id="overlaySearchInput" placeholder="Type keywords to search..." />
+      <button id="overlaySearchButton">
+        <img src="image/searchicon3.png" alt="Search" />
+      </button>
+    </div>
+  </div>
+  <div id="searchResultsContainer" style="display:none;"></div>
+  <!-- Modern, organized mobile burger menu overlay -->
+  <div id="mobileNavOverlay" class="mobile-nav-overlay">
+    <nav class="mobile-nav-content">
+      <button id="closeMobileNav" class="close-mobile-nav" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ai-annotation.html" class="active">AI Annotation</a></li>
+        <li><a href="howitworks.html">How It Works</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    // Burger menu overlay script removed; nav.js handles navigation logic for consistency.
+  </script>
+
+  <main>
+
+  <!-- ...existing code... -->
+
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="how-it-works-section.css">
+
+    <!-- ...existing code... -->
+  <!-- Removed yellow banner. Heading is in hero left column. -->
+    <section class="ai-annotation-hero">
+      <!-- New Figma-based hero section start -->
+      <style>
+      /* FORCE: Prevent overlap between hero and educational-section on mobile */
+      @media (max-width: 900px) {
+        .ai-annotation-hero {
+          margin-bottom: 120px !important;
+        }
+        .educational-section {
+          margin-top: 120px !important;
+        }
+        /* Remove any margin-bottom:0 on collage/video-wrapper */
+        .ai-annotation-hero .video-wrapper,
+        .ai-annotation-hero .video-container,
+        .ai-annotation-hero .staggered-collage-wrapper {
+          margin-bottom: 0 !important;
+        }
+      }
+      </style>
+      <link rel="stylesheet" href="modern-gradient.css">
+      <section class="hero-section" style="padding-top: 70px; padding-bottom: 8px;">
+        <div class="container" style="padding-top: 0; padding-bottom: 0;">
+          <div class="grid-two-col" style="align-items: flex-start; gap: 48px;">
+                <!-- Left Content -->
+                <div class="content-left">
+                    <div class="badge">AI-Powered Solutions</div>
+                        <h1 class="main-title" style="font-size: 2.6rem; line-height: 1.15;">
+                          AI Data Annotation & <br>
+                          <span class="gradient-text">Human-in-the-Loop</span><span class="responsive-break"> <br>Services</span>
+                        </h1>
+                    <p class="description" style="max-width: 480px; line-height: 1.5;">
+                      Secure, scalable, and high-quality data labeling to support machine learning and AI development. Empower your AI with expertly annotated data and tailored workflows, plus human-in-the-loop quality assurance for every project.
+                    </p>
+                    <div class="button-group">
+                        <button class="btn-primary" id="requestQuoteBtn">Request a Quote</button>
+                        <button class="btn-secondary">Learn More</button>
+                    </div>
+                    <!-- Stats -->
+                    <div class="stats-grid" style="column-gap: 0px;">
+                        <div class="stat-item">
+                            <div class="stat-value navy" style="font-size: 1.7rem;">99.9%</div>
+                            <div class="stat-label">Accuracy Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value gold" style="font-size: 1.7rem;">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value navy" style="font-size: 1.7rem;">50M+</div>
+                            <div class="stat-label">Annotations</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Video -->
+                <!-- Collage/Carousel removed for debugging overlay issue -->
+                            <!-- Collage/Carousel re-added with pointer-events: none to prevent blocking Section 2 -->
+                            <div class="video-wrapper" style="align-self: flex-start; margin-top: 0; margin-bottom: 0; pointer-events: none; z-index: 0;">
+                                <div class="video-container" style="align-items: flex-start; justify-content: flex-start; pointer-events: none; z-index: 0;">
+                                  <div class="staggered-collage-wrapper" style="z-index: 0 !important;">
+                                    <div class="staggered-collage-row row1" style="pointer-events: none;">
+                                      <img src="image/1.png" alt="Collage 1" />
+                                      <img src="image/2.png" alt="Collage 2" />
+                                      <img src="image/3.png" alt="Collage 3" />
+                                      <img src="image/4.png" alt="Collage 4" />
+                                      <img src="image/5.png" alt="Collage 5" />
+                                      <img src="image/6.png" alt="Collage 6" />
+                                      <img src="image/7.png" alt="Collage 7" />
+                                      <img src="image/8.png" alt="Collage 8" />
+                                      <img src="image/1.png" alt="Collage 1" />
+                                      <img src="image/2.png" alt="Collage 2" />
+                                      <img src="image/3.png" alt="Collage 3" />
+                                      <img src="image/4.png" alt="Collage 4" />
+                                      <img src="image/5.png" alt="Collage 5" />
+                                      <img src="image/6.png" alt="Collage 6" />
+                                      <img src="image/7.png" alt="Collage 7" />
+                                      <img src="image/8.png" alt="Collage 8" />
+                                    </div>
+                                    <div class="staggered-collage-row row2" style="pointer-events: none;">
+                                      <img src="image/9.png" alt="Collage 9" />
+                                      <img src="image/10.png" alt="Collage 10" />
+                                      <img src="image/11.png" alt="Collage 11" />
+                                      <img src="image/12.png" alt="Collage 12" />
+                                      <img src="image/13.png" alt="Collage 13" />
+                                      <img src="image/14.png" alt="Collage 14" />
+                                      <img src="image/15.png" alt="Collage 15" />
+                                      <img src="image/16.png" alt="Collage 16" />
+                                      <img src="image/9.png" alt="Collage 9" />
+                                      <img src="image/10.png" alt="Collage 10" />
+                                      <img src="image/11.png" alt="Collage 11" />
+                                      <img src="image/12.png" alt="Collage 12" />
+                                      <img src="image/13.png" alt="Collage 13" />
+                                      <img src="image/14.png" alt="Collage 14" />
+                                      <img src="image/15.png" alt="Collage 15" />
+                                      <img src="image/16.png" alt="Collage 16" />
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+      </section>
+      <!-- New Figma-based hero section end -->
+    </section>
+    <script>
+      // Ensure row2 animation always starts (fixes rare bug on navigation)
+      function restartRow2Animation() {
+        var row2 = document.querySelector('.staggered-collage-row.row2');
+        if (row2) {
+          // Remove and re-add the animation by toggling a class
+          row2.style.animation = 'none';
+          // Force reflow
+          void row2.offsetWidth;
+          row2.style.animation = '';
+        }
+      }
+      // On page show (back/forward cache), and DOMContentLoaded
+      window.addEventListener('pageshow', restartRow2Animation);
+      document.addEventListener('DOMContentLoaded', restartRow2Animation);
+    </script>
+    </main>
+      <!-- Section 2: Our AI Data Services -->
+      <section id="ai-data-services" style="padding: 24px 0; background: #fff; margin-top: 4rem;">
+        <div class="modern-services-container">
+          <div class="modern-services-header">
+            <h1 class="main-title modern-services-title">
+              <span style="color: var(--navy);">Our</span> <span class="gradient-text">AI Data</span> <span style="color: var(--navy);">Services</span>
+            </h1>
+            <p class="modern-services-desc">Human-guided data services that improve AI accuracy, safety, and performance</p>
+          </div>
+          <div class="modern-services-grid">
+            <div class="modern-service-card">
+              <div class="modern-service-icon" style="background: linear-gradient(135deg, #ffd700 0%, #fffbe6 100%);">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#23235a" stroke-width="1.7">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="modern-service-accent"></div>
+              <h3 class="modern-service-title">Text Annotation (NLP)</h3>
+              <p class="modern-service-desc">We label text so AI understands meaning, intent, and tone.</p>
+              <div class="modern-service-usedfor"><span>Used for:</span> Chatbots, search engines, and language models.</div>
+            </div>
+            <div class="modern-service-card">
+              <div class="modern-service-icon" style="background: linear-gradient(135deg, #aee2ff 0%, #e0e7ff 100%);">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#23235a" stroke-width="1.7">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <div class="modern-service-accent"></div>
+              <h3 class="modern-service-title">Image & Video Annotation</h3>
+              <p class="modern-service-desc">We label visual data so AI can recognize objects, actions, and scenes.</p>
+              <div class="modern-service-usedfor"><span>Used for:</span> Computer vision, security, and autonomous systems.</div>
+            </div>
+            <div class="modern-service-card">
+              <div class="modern-service-icon" style="background: linear-gradient(135deg, #ffe6e6 0%, #fffbe6 100%);">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#23235a" stroke-width="1.7">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+              </div>
+              <div class="modern-service-accent"></div>
+              <h3 class="modern-service-title">Human-in-the-Loop (HITL)</h3>
+              <p class="modern-service-desc">Humans review and correct AI outputs to improve accuracy and reliability.</p>
+              <div class="modern-service-usedfor"><span>Used for:</span> Maintaining AI performance and consistency.</div>
+            </div>
+            <div class="modern-service-card">
+              <div class="modern-service-icon" style="background: linear-gradient(135deg, #e0ffe6 0%, #e6f7ff 100%);">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#23235a" stroke-width="1.7">
+                  <polyline points="9 11 12 14 22 4"></polyline>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+              </div>
+              <div class="modern-service-accent"></div>
+              <h3 class="modern-service-title">RLHF & AI Evaluation</h3>
+              <p class="modern-service-desc">Human evaluators assess and rank AI responses for quality and safety.</p>
+              <div class="modern-service-usedfor"><span>Used for:</span> Refining large language models.</div>
+            </div>
+          </div>
+          <div class="modern-services-cta">
+            <a href="#contact" class="modern-services-btn">Talk to an AI Data Specialist</a>
+          </div>
+        </div>
+        <style>
+          .modern-services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+          }
+          .modern-services-header {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          .modern-services-title {
+            font-size: 2.6rem;
+            line-height: 1.15;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+          }
+          .modern-services-desc {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #fff;
+            background: transparent;
+            padding: 0;
+            text-align: left;
+            border-radius: 0;
+            margin: 0;
+            gap: 32px;
+            justify-content: center;
+            align-items: stretch;
+            margin-bottom: 48px;
+            margin-top: 2.5rem !important;
+          }
+          /* Center the last card if it's alone in a row (e.g., 3 by 1 layout) */
+          @media (min-width: 700px) and (max-width: 1200px) {
+            .modern-services-grid > .modern-service-card:last-child:nth-child(4) {
+              grid-column: 2 / 3;
+            }
+          }
+          .modern-service-card {
+            background: rgba(255,255,255,0.65);
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(44,44,100,0.10), 0 1.5px 8px rgba(44,44,100,0.07);
+            backdrop-filter: blur(12px) saturate(1.2);
+            -webkit-backdrop-filter: blur(12px) saturate(1.2);
+            padding: 36px 28px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+            min-height: 340px;
+            overflow: hidden;
+            user-select: text !important;
+            pointer-events: auto !important;
+          }
+          .modern-service-card *, .modern-service-card *:before, .modern-service-card *:after {
+            user-select: text !important;
+            pointer-events: auto !important;
+          }
+          .modern-service-card:hover {
+            box-shadow: 0 12px 40px rgba(44,44,100,0.18), 0 2px 12px rgba(44,44,100,0.10);
+            /* No transform so card stays stationary */
+          }
+          .modern-service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 12px rgba(44,44,100,0.10);
+            transition: box-shadow 0.2s;
+          }
+          .modern-service-card:hover .modern-service-icon {
+            box-shadow: 0 4px 18px rgba(44,44,100,0.18);
+          }
+          .modern-service-accent {
+            width: 36px;
+            height: 4px;
+            border-radius: 2px;
+            background: linear-gradient(90deg,#ffd700,#fffbe6);
+            margin-bottom: 18px;
+          }
+          .modern-service-title {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #23235a;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 0.01em;
+          }
+          .modern-service-desc {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: 400;
+          }
+          .modern-service-usedfor {
+            margin-top: auto;
+            font-size: 1.01rem;
+            color: #666;
+            text-align: center;
+            background: rgba(255,255,255,0.45);
+            border-radius: 12px;
+            padding: 8px 12px 7px 12px;
+            margin-bottom: 0;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(44,44,100,0.04);
+            transition: background 0.2s;
+          }
+          .modern-service-usedfor span {
+            color: #bfa100;
+            font-weight: 700;
+          }
+          .modern-services-cta {
+            text-align: center;
+            margin-top: 2.5rem !important;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+          }
+          .modern-services-btn {
+            display: inline-block;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #2d2d62;
+            background: linear-gradient(90deg,#ffd700,#fffbe6);
+            padding: 14px 36px;
+            border-radius: 32px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(44,44,100,0.07);
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+            user-select: text;
+            cursor: pointer;
+            margin-bottom: 18px;
+          }
+          .modern-services-btn:hover {
+            background: linear-gradient(90deg,#ffe066,#fffbe6);
+            color: #23235a;
+            box-shadow: 0 4px 18px rgba(44,44,100,0.13);
+            transform: translateY(-2px) scale(1.03);
+          }
+          @media (max-width: 900px) {
+            .modern-services-cta .modern-services-btn { margin-bottom: 16px !important; }
+          }
+          @media (max-width: 600px) {
+            .modern-services-cta .modern-services-btn { margin-bottom: 16px !important; }
+          }
+        </style>
+        </section>
+
+        <!-- Section 3: Educational Section - What Is AI Data Annotation? -->
+
+        <section class="educational-section" id="scale-section" style="margin-top: 4rem;">
+        <!-- Styles moved to modern-gradient.css for maintainability -->
+        <div class="section-content">
+          <div class="two-column-layout">
+            <!-- Left Column - Text Content -->
+            <div class="text-column">
+              <h2 id="scale-title" class="section-headline" style="font-size: 2.6rem; line-height: 1.15; font-weight: 700; color: var(--navy); scroll-margin-top: 100px;">
+                <span style="color: var(--navy);">Human-in-the</span><span class="gradient-text">-Loop AI, Done</span> <span style="color: var(--navy);">at Scale</span>
+              </h2>
+              <div class="paragraph-wrapper">
+                <p class="paragraph">
+                  AI performance depends on the quality, consistency, and domain accuracy of its training and evaluation data.
+                </p>
+                <p class="paragraph">
+                  At DataFil, we support AI teams by providing trained human specialists who label, review, and evaluate complex datasets across text, image, video, and AI-generated outputs. Our workflows are designed to integrate seamlessly into existing machine-learning pipelines, ensuring reliable data quality even at high volumes.
+                </p>
+                <p class="paragraph">
+                  Through structured human-in-the-loop processes, we help reduce model errors, mitigate bias, and improve real-world reliability without slowing iteration cycles or compromising accuracy.
+                </p>
+              </div>
+              <div class="closing-line">
+                <p class="emphasis-text">
+                  Human expertise remains essential to building reliable AI.
+                </p>
+              </div>
+            </div>
+            <!-- Right Column - Image -->
+            <div class="visual-column">
+              <div class="image-wrapper">
+                <svg viewBox="0 0 1200 800" width="100%" height="100%" style="width: 100%; height: 100%; max-width: 100%; display: block; margin: 0 auto;">
+                  html, body {
+                    overflow-x: hidden !important;
+                  }
+                  <defs>
+                    <linearGradient id="dShapeGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="var(--navy)" />
+                      <stop offset="100%" stop-color="var(--gold)" />
+                    </linearGradient>
+                    <clipPath id="dShapeClip">
+                      <path d="M120,80 v640 h480 a240,320 0 1 0 0,-640 h-480 z" />
+                    </clipPath>
+                  </defs>
+                  <!-- Large yellow triangle with thin solid lines, centered and as big as the circle -->
+                              
+                  <!-- Large yellow triangle with transparent center, behind everything -->
+                              
+                  <g>
+                                        <!-- Centered yellow square, same size as the circle, solid thin lines -->
+                                        <rect x="80" y="10" width="780" height="780" fill="none" stroke="#FFD700" stroke-width="4" style="vector-effect: non-scaling-stroke;" />
+                    <!-- Navy blue dotted circle behind D -->
+                    <circle cx="470" cy="400" r="400" fill="none" stroke="var(--navy)" stroke-width="4" stroke-dasharray="8,16" />
+                    <path d="M120,80 v640 h480 a240,320 0 1 0 0,-640 h-480 z" fill="none" stroke="url(#dShapeGradient)" stroke-width="36" />
+                    <g clip-path="url(#dShapeClip)">
+                      <image class="zoom-animate-img" href="image/aisection3image.png" x="120" y="80" width="720" height="640" preserveAspectRatio="none" />
+                    </g>
+                  </g>
+                </svg>
+                <style>
+                .zoom-animate-img {
+                  transform-origin: 50% 50%;
+                  animation: zoomInOut 7s ease-in-out infinite alternate;
+                }
+                @keyframes zoomInOut {
+                  0% { transform: scale(1); }
+                  100% { transform: scale(1.08); }
+                }
+                </style>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+    <!-- CSS Styles for Section 4: Domain-Specific Experts -->
+
+    <!-- CSS Styles -->
+    <style>
+    /* Experts Section Styles */
+    .experts-section {
+      width: 100%;
+      padding: 0 1rem 5rem 1rem;
+      /* Removed margin-top override to allow natural spacing */
+      background-color: #FFFFFF;
+    }
+
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      /* Removed margin-top and padding-top override to allow natural spacing */
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 50rem;
+      margin: 0 auto 4rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2D2D62;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      color: #4A4A4A;
+      line-height: 1.7;
+      margin-bottom: 2.5rem !important;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Expert Cards */
+    .expert-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E0E0;
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .expert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.15);
+    }
+
+    /* Icon */
+    .icon-wrapper {
+      margin-bottom: 1rem;
+    }
+
+    .card-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .expert-card:hover .card-icon {
+      transform: scale(1.1);
+    }
+
+    /* Card Title */
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2D2D62;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Card Description */
+    .card-description {
+      font-size: 1rem;
+      color: #666666;
+      line-height: 1.6;
+    }
+
+    /* CTA Area */
+    .cta-wrapper {
+      text-align: center;
+      margin-top: 3rem;
+      /* Remove this style block after updating CTA to use .modern-services-cta */
+    }
+
+    .cta-button {
+      /* Remove this style block after updating CTA to use .modern-services-btn */
+    }
+
+    .cta-helper-text {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        font-size: 0.875rem;
+        color: #888888;
+        line-height: 1.1 !important;
+    }
+
+    /* Tablet Responsive (768px and up) */
+    @media (min-width: 768px) {
+      .experts-section {
+        padding: 6rem 1.5rem;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .section-description {
+        font-size: 1.25rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop Responsive (1024px and up) */
+    @media (min-width: 1024px) {
+      .experts-section {
+        padding: 6.25rem 2rem;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Large Desktop */
+    @media (min-width: 1280px) {
+      .section-title {
+        font-size: 3.5rem;
+      }
+    }
+    </style>
+
+    <!-- Domain-Specific Experts Section -->
+
+    <section class="experts-section" style="margin-top: 0;">
+      <style>
+      @media (max-width: 900px) {
+        #ai-data-services,
+        .educational-section,
+        .experts-section {
+          margin-top: 2.5rem !important;
+        }
+      }
+      @media (max-width: 600px) {
+        #ai-data-services,
+        .educational-section,
+        .experts-section {
+          margin-top: 1.5rem !important;
+        }
+      }
+      </style>
+      <div class="section-content">
+        <!-- Header -->
+        <div class="section-header">
+          <h2 class="section-title">
+            <span style="color:var(--navy);">Domain-Specific Experts</span><br>
+            <span class="gradient-text">Behind Every Dataset</span>
+          </h2>
+
+          <style>
+            /* Force line break before 'Dataset' for desktop and up */
+            @media (min-width: 1024px) {
+              .desktop-break {
+                display: block;
+              }
+            }
+            @media (max-width: 1023.98px) {
+              .desktop-break {
+                display: none;
+              }
+            }
+          </style>
+          </h2>
+          <p class="section-description">
+            We match your AI project with professionals who understand your industry, terminology, and use cases, ensuring data quality, accuracy, and relevance from day one.
+          </p>
+        </div>
+
+        <!-- Expertise Cards Grid -->
+        <div class="cards-grid">
+          <!-- Card 1 - Healthcare -->
+          <div class="expert-card" data-card="0">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Healthcare Professionals</h3>
+            <p class="card-description">
+              Domain-trained healthcare specialists supporting medical, health, and life-sciences AI.
+            </p>
+          </div>
+
+          <!-- Card 2 - Legal -->
+          <div class="expert-card" data-card="1">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <path d="M16 16v6M8 16v6M4 7h16M6 3h12l2 4H4l2-4zM5 7v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7H5z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Legal & Compliance Experts</h3>
+            <p class="card-description">
+              Professionals trained to handle legal text, contracts, policy review, and regulatory datasets.
+            </p>
+          </div>
+
+          <!-- Card 3 - Technology -->
+          <div class="expert-card" data-card="2">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">IT & Technical Specialists</h3>
+            <p class="card-description">
+              Technically trained professionals supporting code-related, system, and technical AI data.
+            </p>
+          </div>
+
+          <!-- Card 4 - Business & Finance -->
+          <div class="expert-card" data-card="3">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Business & Finance Professionals</h3>
+            <p class="card-description">
+              Professionals with experience in business operations, finance, and accounting supporting enterprise AI models.
+            </p>
+          </div>
+
+          <!-- Card 5 - Multidisciplinary -->
+          <div class="expert-card" data-card="4">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Multidisciplinary & Multilingual Teams</h3>
+            <p class="card-description">
+              Domain-trained professionals assembled based on project language, industry, and technical requirements.
+            </p>
+          </div>
+
+          <!-- Card 6 - Quality & Evaluation -->
+          <div class="expert-card" data-card="5">
+            <div class="icon-wrapper">
+              <svg class="card-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+                <polyline points="9 12 10.5 13.5 13 11"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Quality & Evaluation Specialists</h3>
+            <p class="card-description">
+              Professionals trained to review, score, and validate AI outputs for accuracy, consistency, and safety.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA Area -->
+        <div class="modern-services-cta">
+           <a href="#contact" class="modern-services-btn" id="ctaButton">Request a Custom Team</a><p class="cta-helper-text">Tell us your domain, data type, and scale—we'll build the right team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: How It Works (inserted directly after Section 4) -->
+    <style>
+    /* How It Works Section Styles */
+    .how-it-works-section {
+      width: 100%;
+      padding: 1rem 1rem 5rem 1rem;
+      background: #fff;
+      position: relative;
+      margin-top: 0.2rem;
+      margin-bottom: 7rem !important;
+    }
+    .how-it-works-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .how-it-works-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-top: 0;
+    }
+    .how-it-works-title {
+      /* Inherit font size, weight, and color from .main-title and .modern-services-title for consistency */
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .how-it-works-subtitle {
+      font-size: 1.25rem;
+      color: #666666;
+      line-height: 1.6;
+    }
+    .workflow-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .workflow-step {
+      flex: 1;
+      min-width: 180px;
+      max-width: 220px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      padding: 0 1rem;
+    }
+    .step-number {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .step-icon-wrapper {
+      width: 160px !important;
+      height: 160px !important;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent !important;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .workflow-step:hover .step-icon-wrapper {
+      transform: scale(1.08);
+      background: rgba(255, 215, 0, 0.15);
+    }
+    .step-icon {
+      width: 160px !important;
+      height: 160px !important;
+    }
+    .step-title {
+      font-size: 1.22rem;
+      font-weight: 600;
+      color: #2D2D62;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .step-description {
+      font-size: 0.98rem;
+      color: #555555;
+      line-height: 1.6;
+    }
+    .arrow-connector {
+      display: none;
+    }
+    .workflow-arrow {
+      display: none;
+      align-items: center;
+      height: 80px;
+      margin: 0 0.5rem;
+    }
+    .workflow-arrow svg {
+      width: 48px;
+      height: 24px;
+      display: block;
+    }
+    .workflow-arrow {
+      display: none !important;
+      align-items: center;
+      height: 80px;
+      margin: 0 0.5rem;
+    }
+    .workflow-arrow svg {
+      width: 48px;
+      height: 24px;
+      display: block;
+    }
+    @media (min-width: 1250px) {
+      .workflow-arrow {
+        display: flex !important;
+      }
+    }
+    @media (max-width: 1249px) {
+      .workflow-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      }
+      .workflow-step {
+        max-width: 400px;
+        padding: 0;
+      }
+      .arrow-connector {
+        display: none;
+      }
+      .workflow-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 2rem;
+        background: linear-gradient(180deg, #FFD700 0%, #E0C068 100%);
+        opacity: 0.4;
+      }
+      .workflow-step:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        bottom: -2.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid #FFD700;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        opacity: 0.6;
+        z-index: 3;
+      }
+    }
+    @media (min-width: 768px) {
+      .how-it-works-title {
+        font-size: 3rem;
+      }
+      .how-it-works-subtitle {
+        font-size: 1.375rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .how-it-works-section {
+        padding: 6.25rem 2rem;
+      }
+      .how-it-works-title {
+        font-size: 3rem;
+      }
+      .workflow-container {
+        flex-wrap: nowrap;
+      }
+    }
+    @media (min-width: 1280px) {
+      .how-it-works-title {
+        font-size: 3.5rem;
+      }
+    }
+    </style>
+
+    <section class="how-it-works-section">
+      <div class="how-it-works-content">
+        <!-- Section Header -->
+        <div class="how-it-works-header">
+          <h1 class="main-title modern-services-title how-it-works-title">
+            <span style="color: var(--navy);">Ho</span><span class="gradient-text">w It Wor</span><span style="color: var(--navy);">ks</span>
+          </h1>
+          <p class="how-it-works-subtitle">Human insight turns data into reliable intelligence.</p>
+        </div>
+        <!-- Workflow Diagram -->
+        <div class="workflow-container">
+          <!-- Step 1 -->
+          <div class="workflow-step" data-step="1">
+            <span class="step-number">Step 1</span>
+            <div class="step-icon-wrapper">
+              <img class="step-icon" src="image/aiiconstep1.png" alt="Step 1 Icon" style="width:160px !important;height:160px !important;object-fit:contain;" />
+            </div>
+            <h3 class="step-title">Data Intake & Task Design</h3>
+            <p class="step-description">
+              Review data, objectives, and edge cases to define clear annotation and evaluation guidelines.
+            </p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="4" y1="12" x2="44" y2="12" stroke="#FFD700" stroke-width="3" opacity="0.4"/><polygon points="44,6 48,12 44,18" fill="#FFD700" opacity="0.6"/></svg>
+          </div>
+          <!-- Step 2 -->
+          <div class="workflow-step" data-step="2">
+            <span class="step-number">Step 2</span>
+            <div class="step-icon-wrapper">
+              <img class="step-icon" src="image/aiiconstep2.png" alt="Step 2 Icon" style="width:160px !important;height:160px !important;object-fit:contain;" />
+            </div>
+            <h3 class="step-title">Domain-Trained Human Annotation</h3>
+            <p class="step-description">
+              Professionals label and enrich data using domain knowledge and contextual understanding.
+            </p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="4" y1="12" x2="44" y2="12" stroke="#FFD700" stroke-width="3" opacity="0.4"/><polygon points="44,6 48,12 44,18" fill="#FFD700" opacity="0.6"/></svg>
+          </div>
+          <!-- Step 3 -->
+          <div class="workflow-step" data-step="3">
+            <span class="step-number">Step 3</span>
+            <div class="step-icon-wrapper">
+              <img class="step-icon" src="image/aiiconstep3.png" alt="Step 3 Icon" style="width:160px !important;height:160px !important;object-fit:contain;" />
+            </div>
+            <h3 class="step-title">Human Judgment for Ambiguity</h3>
+            <p class="step-description">
+              Human reviewers resolve nuance, emotion, intent, and ethical dilemmas AI cannot judge alone.
+            </p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="4" y1="12" x2="44" y2="12" stroke="#FFD700" stroke-width="3" opacity="0.4"/><polygon points="44,6 48,12 44,18" fill="#FFD700" opacity="0.6"/></svg>
+          </div>
+          <!-- Step 4 -->
+          <div class="workflow-step" data-step="4">
+            <span class="step-number">Step 4</span>
+            <div class="step-icon-wrapper">
+              <img class="step-icon" src="image/aiiconstep4.png" alt="Step 4 Icon" style="width:160px !important;height:160px !important;object-fit:contain;" />
+            </div>
+            <h3 class="step-title">Multi-Layer Quality Review</h3>
+            <p class="step-description">
+              Structured human review cycles ensure accuracy, consistency, and guideline adherence.
+            </p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="4" y1="12" x2="44" y2="12" stroke="#FFD700" stroke-width="3" opacity="0.4"/><polygon points="44,6 48,12 44,18" fill="#FFD700" opacity="0.6"/></svg>
+          </div>
+          <!-- Step 5 -->
+          <div class="workflow-step" data-step="5">
+            <span class="step-number">Step 5</span>
+            <div class="step-icon-wrapper">
+              <img class="step-icon" src="image/aiiconstep5.png" alt="Step 5 Icon" style="width:160px !important;height:160px !important;object-fit:contain;" />
+            </div>
+            <h3 class="step-title">AI-Ready Output Delivery</h3>
+            <p class="step-description">
+              Validated datasets delivered in formats optimized for training and evaluation.
+            </p>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- JavaScript for How It Works Section -->
+    <script>
+    // How It Works Section Interactive Elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const workflowSteps = document.querySelectorAll('.workflow-step');
+      // Step hover effects
+      workflowSteps.forEach((step, index) => {
+      step.addEventListener('mouseenter', function() {
+        console.log(`Workflow step ${index + 1} hovered`);
+      });
+      step.addEventListener('mouseleave', function() {
+        console.log(`Workflow step ${index + 1} unhovered`);
+      });
+      });
+    });
+    </script>
+
+    <!-- How to Work With DataFil Section -->
+    <style>
+    /* Work With DataFil Section Styles */
+    .work-with-section {
+      width: 100%;
+      padding: 5rem 1rem;
+      background-color: #fff;
+      margin-top: 4rem;
+      padding-top: 5rem;
+    }
+
+    .work-with-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Two Column Layout */
+    .two-column-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Left Column - Text Content */
+    .left-column {
+      padding-right: 0;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1.5rem;
+    }
+
+    .work-with-headline {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #2D2D62;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .work-with-subheading {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #FFD700;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .body-text {
+      font-size: 1rem;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .body-text p {
+      margin-bottom: 1rem;
+    }
+
+    /* Key Benefits */
+    .key-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-top: 0.125rem;
+    }
+
+    .benefit-content h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #2D2D62;
+      margin-bottom: 0.375rem;
+    }
+
+    .benefit-content p {
+      font-size: 0.9375rem;
+      color: #666666;
+      line-height: 1.6;
+    }
+
+    /* Right Column - Contact Form */
+    .right-column {
+      background-color: #2D2D62;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      color: #FFD700;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-label {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-label.optional {
+      color: #888888;
+    }
+
+    .form-label .optional-text {
+      font-weight: 400;
+      color: #999999;
+      font-size: 0.875rem;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      padding: 0.875rem 1rem;
+      font-size: 1rem;
+      color: #000 !important;
+      border: 1px solid #D0D0D0;
+      border-radius: 0.5rem;
+      background-color: #fff !important;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .form-select,
+    .form-select option {
+      color: #000 !important;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: #FFD700;
+      background-color: #fff !important;
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-select {
+      cursor: pointer;
+    }
+
+    .submit-button {
+      padding: 0.9em 2.2em;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2d2d62;
+      background: linear-gradient(135deg, #fff 0%, #f8cf40 100%);
+      border: none;
+      border-radius: 2em;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+      box-shadow: 0 2px 8px rgba(44,44,100,0.07);
+      width: auto;
+      min-width: 180px;
+      max-width: 340px;
+      display: block;
+      margin: 0.5rem auto 0 auto;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      position: relative;
+      z-index: 1;
+      font-family: inherit;
+    }
+
+    .submit-button:hover {
+      background: linear-gradient(135deg, #ffe066 0%, #ffd700 100%);
+      color: #2d2d62;
+      box-shadow: 0 8px 32px rgba(248, 207, 64, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .submit-button:active {
+      transform: translateY(0);
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      .work-with-section {
+        padding: 6rem 1.5rem;
+      }
+
+      .work-with-headline {
+        font-size: 2.75rem;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      .work-with-section {
+        padding: 6.25rem 2rem;
+      }
+
+      .two-column-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+
+      .left-column {
+        padding-right: 2rem;
+      }
+
+      .work-with-headline {
+        font-size: 3rem;
+      }
+    }
+
+    /* Large Desktop */
+    @media (min-width: 1280px) {
+      .work-with-headline {
+        font-size: 3.25rem;
+      }
+    }
+    </style>
+
+    <section class="work-with-section">
+      <div class="work-with-content">
+        <div class="two-column-container">
+          <!-- Left Column - Text Content -->
+          <div class="left-column">
+
+
+            <!-- Headline -->
+            <h2 class="work-with-headline">
+              <span style="color: var(--navy);">How to </span>
+              <span class="gradient-text">Work With</span>
+              <span style="color: var(--navy);"> DataFil</span>
+            </h2>
+
+            <!-- Subheading -->
+            <p class="work-with-subheading">
+              Flexible engagement models built to fit your data, scale, and timeline.
+            </p>
+
+            <!-- Body Text -->
+            <div class="body-text">
+              <p>
+                At DataFil, starting your AI project is simple. Whether you need a small pilot, ongoing production support, or large-scale custom programs, we adapt to your requirements; no generic templates, no unnecessary overhead.
+              </p>
+              <p>
+                Our teams integrate seamlessly with your workflows, ensuring high-quality, human-in-the-loop data labeling and evaluation from day one.
+              </p>
+              <p>
+                We staff trained professionals across multiple domains: healthcare professionals, legal experts, IT & technology, business and finance, engineering, and multilingual specialists.
+              </p>
+              <p>
+                All outputs follow strict quality controls and secure processes to maintain reliability, consistency, and confidentiality.
+              </p>
+            </div>
+
+            <!-- Key Benefits -->
+            <div class="key-benefits">
+              <!-- Benefit 1 -->
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <div class="benefit-content">
+                  <h4>Flexible Engagement</h4>
+                  <p>Scale your team according to volume and deadlines.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 2 -->
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <div class="benefit-content">
+                  <h4>Seamless Integration</h4>
+                  <p>Teams adapt to your existing pipelines and tools.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 3 -->
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+                <div class="benefit-content">
+                  <h4>Quality & Security</h4>
+                  <p>Human-in-the-loop review, domain expertise, and confidentiality are standard.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Contact Form -->
+          <div class="right-column" id="contact-form-section">
+            <form class="contact-form" id="datafilContactForm">
+              <!-- Name -->
+              <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Your full name" 
+                  required
+                >
+              </div>
+
+              <!-- Company/Organization -->
+              <div class="form-group">
+                <label class="form-label" for="company">Company/Organization</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  class="form-input" 
+                  placeholder="Your company name"
+                >
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="your.email@company.com" 
+                  required
+                >
+              </div>
+
+              <!-- Phone (Optional) -->
+              <div class="form-group">
+                <label class="form-label optional" for="phone">
+                  Phone <span class="optional-text">(optional)</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="+1 (555) 000-0000"
+                >
+              </div>
+
+              <!-- Project Type / Domain -->
+              <div class="form-group">
+                <label class="form-label" for="projectType">Project Type / Domain</label>
+                <select id="projectType" name="projectType" class="form-select">
+                  <option value="">Select a domain...</option>
+                  <option value="healthcare">Healthcare & Life Sciences</option>
+                  <option value="legal">Legal & Compliance</option>
+                  <option value="technology">IT & Technology</option>
+                  <option value="finance">Business & Finance</option>
+                  <option value="multilingual">Multilingual / Global</option>
+                  <option value="other">Other / Multiple Domains</option>
+                </select>
+              </div>
+
+              <!-- Message / Notes -->
+              <div class="form-group">
+                <label class="form-label" for="message">Message / Notes</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Tell us about your project, timeline, and data requirements..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="submit-button">
+                Request a Custom Team
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+    // Contact Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('datafilContactForm');
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Collect form data
+        const formData = {
+          name: document.getElementById('name').value,
+          company: document.getElementById('company').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          projectType: document.getElementById('projectType').value,
+          message: document.getElementById('message').value
+        };
+
+        console.log('Form submitted with data:', formData);
+
+        // Show success message (replace with your actual form submission logic)
+        alert('Thank you for your interest! We will contact you shortly to discuss your custom team requirements.');
+
+        // Reset form
+        contactForm.reset();
+
+        // TODO: Replace alert with actual form submission to your backend
+        // Example: Send data to your API endpoint
+        // fetch('/api/contact', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData)
+        // }).then(response => response.json())
+        //   .then(data => console.log('Success:', data));
+      });
+
+      // Optional: Add input validation feedback
+      const inputs = contactForm.querySelectorAll('.form-input, .form-textarea, .form-select');
+      inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+            this.style.borderColor = '#FF6B6B';
+          } else {
+            this.style.borderColor = '#D0D0D0';
+          }
+        });
+
+        input.addEventListener('focus', function() {
+          this.style.borderColor = '#FFD700';
+        });
+      });
+    });
+    </script>
+
+    
+  <script src="nav.js" defer></script>
+<script>
+// Modern burger menu functionality (organized, no extra gap)
+const burger = document.getElementById('burgerMenu');
+const overlay = document.getElementById('mobileNavOverlay');
+const closeBtn = document.getElementById('closeMobileNav');
+
+function openMobileNav() {
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+if (burger && overlay && closeBtn) {
+  burger.addEventListener('click', openMobileNav);
+  closeBtn.addEventListener('click', closeMobileNav);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMobileNav();
+  });
+}
+</script>
+<style>
+    .staggered-collage-wrapper {
+      width: 520px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 24px 24px 16px 24px;
+      background: transparent !important;
+      border-radius: 24px;
+      box-shadow: none !important;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      min-height: 220px;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto !important;
+    }
+
+    /* Force pointer-events for Section 2 and all children */
+    .main-content, .main-content * {
+      pointer-events: auto !important;
+      user-select: text !important;
+    }
+    .staggered-collage-row {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 48px;
+      animation: staggered-slide 120s linear infinite;
+      pointer-events: auto;
+      will-change: transform;
+    }
+    .staggered-collage-row.row2 {
+      margin-left: 120px;
+      margin-top: 0;
+      animation-duration: 140s;
+    }
+    .staggered-collage-row img {
+      height: 240px;
+      width: auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(44,44,100,0);
+      background: #f7f7fa;
+      object-fit: contain;
+      transition: transform 0.3s;
+      margin: 0;
+      pointer-events: auto;
+    }
+    .staggered-collage-row img:hover {
+      transform: none;
+      box-shadow: 0 2px 8px rgba(44,44,100,0);
+    }
+    @keyframes staggered-slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (max-width: 900px) {
+      .staggered-collage-row img { height: 240px; }
+      .staggered-collage-row.row2 { margin-left: 120px; }
+      .staggered-collage-wrapper { min-height: 220px; }
+    }
+    @media (max-width: 700px) {
+      .staggered-collage-row img { height: 240px; }
+      .staggered-collage-row.row2 { margin-left: 120px; }
+      .staggered-collage-wrapper { min-height: 220px; }
+    }
+  </style>
+  <style>
+        .container {
+          max-width: 1200px;
+          width: 96vw;
+          margin: 0;
+          padding-left: 8%;
+          padding-right: 2%;
+          box-sizing: border-box;
+          position: relative;
+          /* top removed to prevent upward movement */
+          transition: padding-left 0.3s;
+        }
+      .video-container {
+        width: 100vw;
+        max-width: 100vw;
+        margin-right: calc(-1 * ((100vw - 100%) / 2));
+        margin-left: -120px; /* move carousel even closer to main content */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .content-left {
+          min-width: 0;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto !important;
+            color: #444;
+            font-size: 1.15rem;
+            text-align: left;
+      }
+      .staggered-collage-wrapper {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        min-height: 220px;
+        position: relative;
+        z-index: 2;
+        /* pointer-events: none; */
+      }
+      @media (min-width: 1201px) {
+        .hero-section {
+          padding-top: 140px !important;
+        }
+      }
+      @media (max-width: 1200px) {
+        .hero-section {
+          padding-top: 16px !important;
+        }
+        .container {
+          padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          .grid-two-col {
+            display: flex;
+            flex-direction: column;
+          }
+          .video-wrapper {
+            order: 1;
+            margin-bottom: 20px;
+          }
+          .content-left {
+            order: 2;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+          }
+          .video-container {
+            width: 100vw;
+            max-width: 100vw;
+            margin-right: 0;
+            margin-left: 0;
+            justify-content: center;
+          }
+          .content-left {
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 0;
+            padding-left: 16px !important;
+            order: 2;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 0 !important;
+          }
+      @media (max-width: 700px) {
+        .content-left {
+          margin-top: 0 !important;
+        }
+      }
+      }
+      /* Remove or comment out the 900px stacking media query */
+      /*
+      @media (max-width: 900px) {
+          .container {
+            width: 100vw;
+            padding-left: 0;
+            padding-right: 0;
+            top: 0; 
+          }
+          .grid-two-col {
+            display: flex;
+            flex-direction: column;
+          }
+          .video-wrapper {
+            position: static;
+            width: 100vw;
+            max-width: 100vw;
+            order: 1;
+          }
+          .video-container {
+            width: 100vw;
+            max-width: 100vw;
+            margin-right: 0;
+            margin-left: 0;
+            justify-content: center;
+          }
+          .content-left {
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 0;
+            padding-left: 16px !important;
+            order: 2;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+          }
+          .staggered-collage-wrapper {
+            width: 100vw;
+            max-width: none;
+            margin: 0 auto;
+            min-height: 120px;
+            overflow-x: auto;
+          }
+      }
+      */
+    </style>
+    <style>
+      .content-left {
+        min-width: 0;
+        max-width: 700px;
+        width: 700px;
+        padding-left: 32px;
+        /* Ensures space on the left for all screen sizes */
+      }
+      @media (max-width: 900px) {
+        .content-left {
+          width: 100vw;
+          max-width: 100vw;
+          min-width: 0;
+          padding-left: 16px !important;
+          order: 2;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          margin-top: 0 !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .content-left {
+          padding-left: 10px !important;
+        }
+      }
+    </style>
+    <style>
+        @media (max-width: 1200px) {
+          .responsive-break {
+            display: inline;
+          }
+          .responsive-break br {
+            display: none;
+          }
+        }
+        @media (min-width: 1201px) {
+          .responsive-break {
+            display: inline;
+          }
+          .responsive-break br {
+            display: initial;
+          }
+        }
+      </style>
+      <style>
+        /* Responsive description line breaks */
+        .desc-break { display: none; }
+        @media (min-width: 1201px) {
+          .desc-5 { display: initial; }
+        }
+        @media (max-width: 1200px) and (min-width: 701px) {
+          .desc-3 { display: initial; }
+        }
+        @media (max-width: 700px) {
+          .desc-4 { display: initial; }
+        }
+      </style>
+    <style>
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .video-wrapper,
+    .ai-annotation-hero .video-container,
+    .ai-annotation-hero .staggered-collage-wrapper {
+      margin-bottom: 64px !important;
+      min-height: 240px !important;
+      padding: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      outline: none !important;
+      position: static !important;
+      overflow: visible !important;
+    }
+    .ai-annotation-hero .content-left {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      background: transparent !important;
+      position: static !important;
+      z-index: 1 !important;
+    }
+    .ai-annotation-hero .grid-two-col,
+    .ai-annotation-hero .container,
+    .ai-annotation-hero .hero-section {
+      overflow: visible !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+    }
+  }
+</style>
+<style>
+  @media (min-width: 700px) and (max-width: 1200px) {
+    .ai-annotation-hero .content-left {
+      margin-top: 0 !important;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .video-wrapper {
+      margin-top: 120px !important;
+    }
+  }
+</style>
+<style>
+  @media (min-width: 800px) and (max-width: 1200px) {
+    .ai-annotation-hero .content-left {
+      margin-top: 0 !important;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 950px) {
+    .ai-annotation-hero .content-left {
+      margin-top: 0 !important;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .main-title,
+    .ai-annotation-hero .description {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: block !important;
+      width: 100%;
+      max-width: 480px;
+    }
+    .ai-annotation-hero .main-title {
+      margin-bottom: 16px !important;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .content-left {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 480px;
+      float: none !important;
+      display: block !important;
+    }
+    .ai-annotation-hero .badge {
+      display: inline-block !important;
+      width: auto !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: left !important;
+      position: static !important;
+      vertical-align: top !important;
+    }
+    .ai-annotation-hero .main-title {
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      display: block !important;
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    .ai-annotation-hero .badge {
+      display: inline-block !important;
+      width: auto !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: left !important;
+    }
+  }
+</style>
+
+<!-- Spacer to prevent overlap with fixed footer -->
+<div style="height: 100px;"></div>
+
+<footer class="footer" style="padding-bottom: 40px;">
+  <div class="footer-flex-row">
+    <div class="footer-logo" style="display: flex; align-items: center; justify-content: center; min-width: 120px;">
+      <a href="index.html" style="display:inline-block;"><img src="image/datafilwhitelogo.png" alt="DataFil White Logo" style="height: 48px; width: auto; cursor: pointer;" /></a>
+    </div>
+    <div class="footer-nav-grid" style="margin: 0 32px;">
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="index.html" class="footer-nav-link">Home</a></div>
+        <div class="footer-nav-cell"><a href="aboutus.html" class="footer-nav-link">About us</a></div>
+      </div>
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="ai-annotation.html" class="footer-nav-link">AI Annotation</a></div>
+        <div class="footer-nav-cell"><a href="howitworks.html" class="footer-nav-link">How it works</a></div>
+      </div>
+      <div class="footer-nav-row">
+        <div class="footer-nav-cell"><a href="faq.html" class="footer-nav-link">FAQ</a></div>
+        <div class="footer-nav-cell"><a href="contactus.html" class="footer-nav-link">Contact us</a></div>
+      </div>
+    </div>
+    <div class="footer-info-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; min-width: 220px;">
+      <div class="footer-contact-row" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 10px;">
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <img class="footer-landline-icon" src="image/footerphoneicon.png" alt="Landline Phone Icon" style="width:36px; height:36px; display:inline-block; object-fit:cover; background:#fff; border-radius:50%; vertical-align:middle; transition: transform 0.18s;" onmouseover="this.src='image/footerphoneiconyellow.png'; this.style.transform='scale(1.18)';" onmouseout="this.src='image/footerphoneicon.png'; this.style.transform='none';" />
+          <span style="color: #fff; font-size: 0.98rem;">+63 28 654 1753</span>
+        </span>
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <a href="https://wa.me/639267352551" target="_blank" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+            <img src="image/footerwhatsappicon.png" alt="WhatsApp Icon" style="width:36px; height:36px; display:inline-block; object-fit:cover; background:#fff; border-radius:50%; vertical-align:middle; transition: transform 0.18s;" onmouseover="this.src='image/footerwhatsappiconyellow.png'; this.style.transform='scale(1.18)';" onmouseout="this.src='image/footerwhatsappicon.png'; this.style.transform='none';" />
+            <span style="display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; margin-top: 14px;">
+              <span style="color: #fff; font-size: 0.98rem; cursor:pointer;">63 926 735 2551</span>
+              <span style="font-style: italic; color: #b0b0b0; font-size: 0.82em; margin-top: 2px;">Whatsapp</span>
+            </span>
+          </a>
+        </span>
+      </div>
+      <!-- Second row: Copyright and social icons -->
+      <div class="footer-bottom-row" style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 24px;">
+        <div class="footer-copyright" style="color: #fff; font-size: 0.72rem;">© 2025 DataFil. All Rights Reserved.</div>
+        <div class="footer-social-row" style="display: flex; flex-direction: row; align-items: center; gap: 18px;">
+          <a href="https://www.facebook.com/profile.php?id=61576732066938" target="_blank" class="social-icon" aria-label="Facebook">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="12" cy="12" r="12" fill="#ffffff"/>
+               <path fill="#2d2d62" d="M15.12 8.59h-1.38c-.19 0-.42.25-.42.59v1.21h1.8l-.26 2.06
+                 h-1.54v5.29h-2.13v-5.29H9.89v-2.06h1.4v-1.43c0-1.14.77-2.05
+                 2.03-2.05h1.8v2.68z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/datafil-virtual-assistance-0a7a06371/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="12" cy="12" r="12" fill="#ffffff"/>
+               <path fill="#2d2d62" d="M8.54 17.25H6.45V10.5h2.09v6.75zM7.5 9.54c-.67 0-1.2-.54-1.2-1.21
+                 0-.67.53-1.21 1.2-1.21.66 0 1.2.54 1.2 1.21 0 .67-.54 1.21-1.2
+                 1.21zm10.05 7.71h-2.08v-3.27c0-.78-.01-1.79-1.09-1.79s-1.26.86-1.26
+                 1.73v3.33h-2.08V10.5h2v.91h.03c.28-.52.97-1.09 2-1.09 2.14
+                 0 2.53 1.41 2.53 3.25v3.68z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+
+    .footer-landline-icon {
+      transition: filter 0.18s;
+    }
+    .footer-landline-hover:hover .footer-landline-icon {
+      content: url('image/footerphoneiconyellow.png');
+    }
+    .footer-flex-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 48px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .footer-logo {
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0 32px;
+      margin: 0 32px;
+      width: 320px;
+      max-width: 100%;
+    }
+    .footer-nav-row {
+      display: contents;
+    }
+    .footer-nav-cell {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 120px;
+      min-height: 36px;
+    }
+    .footer-nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem !important;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: color 0.18s;
+      position: relative;
+      padding: 0 6px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .footer-nav-link:hover, .footer-nav-link:focus {
+      color: #FFD700;
+    }
+    .footer-nav-link::after {
+      display: none;
+    }
+    .footer-nav-link:hover::after, .footer-nav-link:focus::after {
+      opacity: 1;
+    }
+    .footer-info-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px;
+      min-width: 220px;
+    }
+    .footer-top p {
+      font-size: 0.98rem;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+    .footer-bottom {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .footer-phone-main {
+      font-size: 0.98rem;
+    }
+    .footer-social-row {
+      gap: 12px !important;
+    }
+    .footer-contact-row span,
+    .footer-contact-row span span,
+    .footer-contact-row span span span {
+      font-size: 0.82rem !important;
+    }
+    .footer-contact-row span[style*="font-style: italic"],
+    .footer-copyright {
+      font-size: 0.72rem !important;
+    }
+    .footer-social-row .social-icon svg circle {
+      transition: fill 0.18s;
+    }
+    .footer-social-row .social-icon:hover svg circle {
+      fill: #FFD700;
+    }
+    @media (max-width: 1024px) {
+      .footer-flex-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .footer-nav-grid {
+        align-items: center;
+        margin: 0 0 12px 0;
+      }
+      .footer-info-col {
+        align-items: center;
+        min-width: 0;
+      }
+      .footer-logo {
+        margin-bottom: 12px;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-social-row {
+        justify-content: center !important;
+        width: 100%;
+        margin-left: 0 !important;
+      }
+      .footer-nav-cell { min-width: 60px; font-size: 0.92rem; }
+      .footer-nav-link { font-size: 0.92rem; }
+      .footer-flex-row { gap: 10px; }
+    }
+    @media (min-width: 600px) and (max-width: 1024px) {
+      .footer-nav-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        margin: 0 auto 12px auto !important;
+        gap: 0 18px !important;
+      }
+      .footer-nav-cell {
+        min-width: 0 !important;
+        justify-content: flex-start !important;
+      }
+      .footer-social-row {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+@media (max-width: 1200px) {
+  .contact-section {
+    margin-top: 110px !important; /* Adjust to match navbar+banner height */
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .contact-form-container h2 {
+    padding-top: 0;
+  }
+}
+/* Tablet-specific: reduce top padding above heading */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .contact-form-container h2 {
+    padding-top: 0;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --navbar-height: 80px;
+  --client-bar-height: 90px; /* same as other pages */
+}
+
+/* ===================== Reset Body ===================== */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+
+/* ================== Client Stories Banner ================== */
+.client-stories-bar {
+  width: 100%;
+  height: var(--client-bar-height);
+  margin-top: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8cf40;
+  padding: 0; /* remove extra padding if any */
+  box-sizing: border-box;
+}
+
+
+.client-stories-link {
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d62;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* prevent extra gap if bar is placed INSIDE main */
+.client-stories-bar + main {
+  margin-top: 0 !important;
+}
+
+/* ===================== Contact Section ===================== */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0; /* ✅ remove any bottom margin */
+  z-index: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 0; /* ✅ ensure no extra space */
+}
+
+/* ===================== Contact Image ===================== */
+.contact-image {
+  flex: 1;
+  min-width: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  padding-top: 0;
+  transform-origin: center center;
+  animation: contact-zoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes contact-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+/* ===================== Contact Form ===================== */
+.contact-form-container {
+  flex: 1;
+  background-color: #2d2d62;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact-form-container p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.send-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #fff 0%, #f8cf40 100%);
+  color: #2d2d62;
+  padding: 18px 44px;
+  font-size: 18px;
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 24px;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 20px rgba(248, 207, 64, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.send-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(248, 207, 64, 0.5);
+}
+
+/* ===================== Responsive Adjustments ===================== */
+
+/* Tablet / Medium screens: stack at 1600px */
+@media (max-width: 1600px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
+
+  /* Center form inputs on narrower screens */
+  .form-row input,
+  .form-row textarea {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .contact-form-container h2 {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    font-size: 28px;
+  }
+  .contact-form-container p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+    font-size: 18px;
+  }
+}
+
+/* Large screens adjustment for top padding */
+@media (min-width: 800px) and (max-width: 1800px) {
+  .contact-form-container h2 {
+    padding-top: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-image img {
+    padding-top: 0;
+    object-position: top;
+  }
+}
