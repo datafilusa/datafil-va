@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+        <!-- Poppins font for testimonials -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       <style>
         /* Ensure active burger menu link is always rectangular, even on hover */
         .mobile-nav-list a.active,
@@ -371,6 +373,13 @@ For medical practices, we assist with appointment scheduling, patient coordinati
   </section>
 
 <section class="testimonials fade-in" id="testimonials" >
+    <style>
+      /* Force Poppins font for all <p> tags in testimonials, all screen sizes */
+      #testimonials .testimonial-card p,
+      #testimonials .testimonial-card .location {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+      }
+    </style>
   <h2 id="testimonials-title">
     <img src="image/testimonialsicon.png" alt="Testimonials Icon" class="testimonials-icon">
     TESTIMONIALS
