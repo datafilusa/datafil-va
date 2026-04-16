@@ -260,6 +260,9 @@ body {
 .search-icon img {
   width: 28px;
   height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  object-fit: contain;
   display: block;
   position: relative;
   z-index: 1;
